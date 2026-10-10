@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Los Valles Deshidratados</title>
+<meta name="description" content="Frutas, aromáticas, tomates y verduras deshidratadas 100% naturales. Empresa familiar de Rionegro, Antioquia, desde 2007. Cotiza para tu negocio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
+<style>
+/* Layout: vitrina nocturna. Un solo tema oscuro a propósito: verde noche, crema y dorado; la fruta pone el color.
+   Hero foto + titular superpuesto · 5 tarjetas que abren su detalle · negocios en una franja · nosotros+clientes · cotiza. */
+:root{
+  --bg:#0F1F16; --bg-2:#132820; --surface:#1A3326; --surface-2:#21402F;
+  --ink:#F3EDE0; --muted:#B8B9A9; --line:#2C4636;
+  --gold:#C9A45C; --gold-soft:#E3C88E; --on-gold:#0F1F16;
+  --green:#2E5E3A;
+  --pend-bg:#3A3018; --pend-ink:#F1D58C; --pend-line:#8F7330;
+  --wa:#25A55A; --err:#F2A08E;
+  --font:'Roboto','Helvetica Neue',Arial,system-ui,sans-serif;
+  --r:4px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:400;font-size:1.02rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{font-family:var(--font);font-style:italic;font-weight:300;line-height:1.02;letter-spacing:-.02em;text-wrap:balance;margin:0;color:var(--ink)}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,4.5vw,48px)}
+.eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.muted{color:var(--muted)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--font);font-weight:500;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;padding:1.05em 1.7em;border-radius:var(--r);border:1px solid transparent;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,border-color .2s;min-height:50px}
+.btn-gold{background:var(--gold);color:var(--on-gold)}
+.btn-gold:hover{background:var(--gold-soft)}
+.btn-line{background:transparent;color:var(--ink);border-color:color-mix(in srgb,var(--ink) 40%,transparent)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+
+.pend{display:inline-flex;align-items:center;font-size:.64rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-style:normal;color:var(--pend-ink);background:var(--pend-bg);border:1px dashed var(--pend-line);border-radius:3px;padding:.25em .55em;line-height:1.3;vertical-align:middle}
+.review{background:var(--pend-bg);color:var(--pend-ink);font-size:.8rem;border-bottom:1px dashed var(--pend-line)}
+.review .wrap{display:flex;gap:.4rem 1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-block:.5rem}
+.review button{font:inherit;font-weight:500;background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;padding:.3rem 0}
+
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.75rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;min-width:0}
+.brand .name{font-style:italic;font-weight:300;font-size:1.55rem;letter-spacing:-.01em;line-height:1}
+.brand .sub{font-size:.58rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+nav.main{display:flex;gap:2rem;font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+nav.main a{text-decoration:none;color:var(--muted);padding-block:.3rem}
+nav.main a:hover{color:var(--ink)}
+.head-cta{display:flex;gap:.6rem;align-items:center}
+.head-cta .btn{min-height:42px;padding:.75em 1.2em;font-size:.72rem}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:var(--r);width:44px;height:44px;cursor:pointer;color:var(--ink);place-items:center}
+.menu-btn svg{width:20px;height:20px}
+@media (max-width:900px){
+  nav.main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:.2rem clamp(16px,4.5vw,48px) 1rem}
+  nav.main.open{display:flex}
+  nav.main a{padding:1rem 0;border-bottom:1px solid var(--line);color:var(--ink);font-size:.85rem}
+  .menu-btn{display:grid}
+  .head-cta .btn{display:none}
+}
+
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;min-height:min(78vh,720px)}
+.hero-photo{position:relative;overflow:hidden;background:var(--surface);margin:0}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-text{display:grid;align-content:center;gap:1.4rem;padding-block:3rem;padding-inline:clamp(16px,4.5vw,48px) clamp(24px,4vw,64px);max-width:640px;margin-left:auto;width:100%}
+.hero h1{font-size:clamp(2.9rem,6.4vw,5.6rem)}
+.hero h1 b{font-weight:300;color:var(--gold)}
+.hero .lede{font-size:1.1rem;color:var(--muted);max-width:42ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.4rem}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-photo{order:-1;aspect-ratio:4/5;max-height:72vh;width:100%}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 35%,color-mix(in srgb,var(--bg) 70%,transparent) 70%,var(--bg) 100%)}
+  .hero-text{margin-top:-11rem;position:relative;z-index:1;padding-top:0;padding-inline:clamp(16px,4.5vw,48px);max-width:none}
+  .hero .ctas .btn{flex:1 1 100%}
+}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line);margin:0}
+.facts div{padding:1.1rem clamp(.8rem,2vw,1.4rem);border-left:1px solid var(--line);min-width:0}
+.facts div:first-child{border-left:0}
+.facts dt{font-style:italic;font-weight:300;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.1;color:var(--gold)}
+.facts dd{margin:.3rem 0 0;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);line-height:1.4}
+@media (max-width:640px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.facts div:nth-child(3){border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--line)}}
+
+section.block{padding-block:clamp(4rem,9vw,7rem)}
+.sec-head{display:grid;gap:1rem;margin-bottom:clamp(2rem,5vw,3.5rem)}
+.sec-head h2{font-size:clamp(2.6rem,7.2vw,5rem)}
+.sec-head .muted{max-width:52ch;font-size:1.05rem}
+.sec-head.split{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:end;gap:1rem 3rem}
+@media (max-width:800px){.sec-head.split{grid-template-columns:1fr}}
+
+.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(.6rem,1.4vw,1rem)}
+.card{position:relative;display:block;width:100%;aspect-ratio:3/4.4;border:0;padding:0;border-radius:var(--r);overflow:hidden;cursor:pointer;background:var(--surface);color:var(--ink);text-align:left;font:inherit}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card:hover img{transform:scale(1.04)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,20,14,.92) 0%,rgba(10,20,14,.35) 45%,transparent 70%)}
+.card .ct{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:1.1rem 1.1rem 1.2rem;display:grid;gap:.35rem}
+.card .ct b{font-style:italic;font-weight:300;font-size:clamp(1.6rem,2.4vw,2rem);line-height:1;letter-spacing:-.01em}
+.card .ct span{font-size:.82rem;color:color-mix(in srgb,var(--ink) 80%,transparent);line-height:1.4}
+.card .ct i{font-style:normal;font-size:.66rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:.35rem}
+.card.noimg{background:repeating-linear-gradient(135deg,var(--surface) 0 14px,var(--bg-2) 14px 28px)}
+.card .pend{position:absolute;top:.8rem;left:.8rem;z-index:2}
+@media (max-width:900px){
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card{aspect-ratio:3/4}
+  .card:first-child{grid-column:1/-1;aspect-ratio:16/11}
+}
+
+.scrim{position:fixed;inset:0;background:rgba(5,10,7,.72);z-index:60}
+.sheet{position:fixed;z-index:61;left:0;right:0;bottom:0;max-height:92vh;max-height:92dvh;background:var(--bg-2);border-top:1px solid var(--line);border-radius:14px 14px 0 0;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (min-width:901px){.sheet{left:auto;top:0;width:min(560px,100%);max-height:none;border-radius:0;border-top:0;border-left:1px solid var(--line)}}
+.sheet-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem clamp(16px,4vw,28px);border-bottom:1px solid var(--line)}
+.sheet-head h3{font-size:2rem}
+.x{background:none;border:1px solid var(--line);border-radius:50%;width:44px;height:44px;cursor:pointer;color:var(--ink);display:grid;place-items:center;flex:none}
+.sheet-body{overflow-y:auto;padding:1.2rem clamp(16px,4vw,28px) 1.6rem;display:grid;gap:1.3rem;align-content:start;flex:1}
+.uses{display:flex;flex-wrap:wrap;gap:.4rem}
+.uses span{font-size:.74rem;letter-spacing:.04em;padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.list-label{font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;justify-content:space-between;gap:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--gold)}
+.items{list-style:none;margin:0;padding:0}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:.15rem 1rem;align-items:center;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.item .nm{font-style:italic;font-weight:300;font-size:1.25rem;line-height:1.2}
+.item .ds{font-size:.78rem;color:var(--muted);grid-column:1}
+.item .pr{grid-row:1/span 2;grid-column:2;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.item .pr small{display:block;font-size:.64rem;color:var(--muted);letter-spacing:.06em}
+.add{grid-row:1/span 2;grid-column:3;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer;display:grid;place-items:center}
+.add:hover,.add.done{background:var(--gold);color:var(--on-gold)}
+.add svg{width:16px;height:16px}
+.biz-note{border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;display:grid;gap:.7rem;background:var(--surface)}
+.biz-note p{font-size:.95rem}
+.note{font-size:.75rem;color:var(--muted)}
+
+.biz{background:var(--bg-2);border-block:1px solid var(--line)}
+.benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.benefit{padding:1.6rem 1.4rem 1.6rem 0;display:grid;gap:.5rem;align-content:start;min-width:0}
+.benefit + .benefit{padding-left:1.4rem;border-left:1px solid var(--line)}
+.benefit .k{font-style:italic;font-weight:300;font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1.05;color:var(--gold)}
+.benefit b{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.benefit p{font-size:.92rem;color:var(--muted)}
+@media (max-width:900px){.benefits{grid-template-columns:repeat(2,minmax(0,1fr))}.benefit:nth-child(3){padding-left:0;border-left:0}.benefit:nth-child(n+3){border-top:1px solid var(--line)}}
+.ideas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.4rem);margin-top:clamp(2rem,5vw,3rem)}
+.idea{display:grid;grid-template-columns:96px minmax(0,1fr);gap:1rem;align-items:start;min-width:0}
+.idea img{width:96px;height:120px;object-fit:cover;border-radius:var(--r)}
+.idea h3{font-size:1.6rem;margin-bottom:.4rem}
+.idea p{font-size:.9rem;color:var(--muted)}
+@media (max-width:900px){.ideas{grid-template-columns:1fr}}
+.biz-cta{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:center;justify-content:space-between;margin-top:clamp(2.5rem,5vw,3.5rem);padding-top:2rem;border-top:1px solid var(--line)}
+.biz-cta p{font-style:italic;font-weight:300;font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.2;max-width:28ch}
+.formats{font-size:.8rem;color:var(--muted);margin-top:1.4rem;max-width:90ch}
+
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,6vw,5rem);align-items:center}
+.about-photo{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;max-width:100%}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about-text{display:grid;gap:1.3rem;min-width:0}
+.about-text h2{font-size:clamp(2.6rem,7.2vw,5rem)}
+.about-text .lead{font-size:1.1rem;color:var(--muted);max-width:52ch}
+.steps{list-style:none;margin:.4rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.steps li{padding:1rem .8rem 0 0;display:grid;gap:.3rem;align-content:start;min-width:0}
+.steps b{font-style:italic;font-weight:300;font-size:1.15rem;color:var(--gold)}
+.steps span{font-size:.8rem;color:var(--muted);line-height:1.45}
+@media (max-width:900px){.about{grid-template-columns:1fr}.about-photo{aspect-ratio:16/10}.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:.6rem}}
+.clients{margin-top:clamp(3.5rem,8vw,5.5rem);display:grid;gap:1.2rem}
+.client-names{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem clamp(1.4rem,5vw,3.5rem);padding-block:1.4rem;border-block:1px solid var(--line)}
+.client-names span{font-style:italic;font-weight:300;font-size:clamp(1.5rem,3.4vw,2.3rem);letter-spacing:-.01em}
+.client-names .pend{font-style:normal;font-size:.64rem;letter-spacing:.1em}
+
+.contact{background:var(--bg-2);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+form.quote{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.2rem;min-width:0}
+.field{display:grid;gap:.4rem;min-width:0}
+.full{grid-column:1/-1}
+label,.lbl{font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+input[type=text],select{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:transparent;border:0;border-bottom:1px solid color-mix(in srgb,var(--ink) 35%,transparent);border-radius:0;padding:.7rem 0;min-height:48px}
+select{background:var(--bg-2)}
+select option{background:var(--bg-2);color:var(--ink)}
+input::placeholder{color:color-mix(in srgb,var(--muted) 70%,transparent)}
+input:focus,select:focus{outline:none;border-bottom-color:var(--gold)}
+.checks{display:flex;flex-wrap:wrap;gap:.5rem}
+.checks label{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .95rem;border:1px solid var(--line);border-radius:999px;cursor:pointer;font-size:.85rem;letter-spacing:.02em;text-transform:none;color:var(--ink);font-weight:400;min-height:44px}
+.checks input{accent-color:var(--gold);margin:0}
+.checks label:has(input:checked){border-color:var(--gold);color:var(--gold)}
+.err{font-size:.85rem;color:var(--err);min-height:1.2em}
+.form-actions{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center}
+.done-panel{border:1px solid var(--gold);border-radius:var(--r);padding:1.3rem;display:grid;gap:.8rem}
+.done-panel h3{font-size:1.8rem}
+.channels{display:grid;border-top:1px solid var(--line)}
+.channel{padding:1.1rem 0;border-bottom:1px solid var(--line);display:grid;gap:.3rem;min-width:0}
+.channel .val{font-style:italic;font-weight:300;font-size:1.35rem;overflow-wrap:anywhere;user-select:all}
+.channel .row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.3rem}
+.channel p{font-size:.92rem;color:var(--muted)}
+.mini{font:inherit;font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.55rem .9rem;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;text-decoration:none;min-height:40px;display:inline-flex;align-items:center}
+.mini:hover{border-color:var(--gold);color:var(--gold)}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}form.quote{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;padding-block:2.4rem}
+footer .name{font-style:italic;font-weight:300;font-size:1.6rem;color:var(--ink)}
+footer a{color:var(--muted)}
+.admin-link{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:0;text-align:left}
+@media (max-width:900px){footer .wrap{padding-bottom:calc(2.4rem + 76px)}}
+
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;gap:.5rem;padding:.6rem 16px calc(.6rem + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.dock .btn{flex:1;min-height:48px;padding:.8em;font-size:.72rem}
+.dock .cartb{flex:none;position:relative;background:transparent;border:1px solid var(--line);color:var(--ink);width:52px;padding:0}
+.cnt{position:absolute;top:-6px;right:-6px;background:var(--gold);color:var(--on-gold);border-radius:999px;min-width:20px;height:20px;font-size:.7rem;font-weight:500;display:grid;place-items:center;padding-inline:5px;letter-spacing:0}
+@media (max-width:900px){.dock{display:flex}}
+.floats{position:fixed;right:24px;bottom:24px;z-index:50;display:flex;gap:.7rem;align-items:center}
+@media (max-width:900px){.floats{display:none}}
+.wa-float{width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -10px rgba(0,0,0,.6)}
+.wa-float svg{width:26px;height:26px}
+.cart-pill{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:var(--on-gold);border:0;border-radius:999px;padding:0 1.3rem;height:56px;font:inherit;font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 30px -10px rgba(0,0,0,.6)}
+.cart-pill .n{background:var(--on-gold);color:var(--gold);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:.72rem;letter-spacing:0}
+
+.line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.15rem 1rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
+.line .nm{font-style:italic;font-weight:300;font-size:1.1rem}
+.line .ds{font-size:.76rem;color:var(--muted)}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;grid-row:1/span 2;grid-column:2;align-self:center}
+.qty button{background:none;border:0;width:38px;height:38px;cursor:pointer;color:var(--ink);font-size:1.1rem}
+.qty span{min-width:1.6em;text-align:center;font-variant-numeric:tabular-nums}
+.total{display:flex;justify-content:space-between;font-size:1.05rem;font-variant-numeric:tabular-nums}
+.sheet-foot{padding:1rem clamp(16px,4vw,28px);border-top:1px solid var(--line);display:grid;gap:.6rem}
+.sheet-foot .btn{width:100%}
+
+.admin table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:720px}
+.admin th,.admin td{text-align:left;padding:.7rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+.admin th{font-weight:500;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r)}
+.chip{display:inline-block;padding:.15rem .55rem;border-radius:999px;font-size:.7rem;font-weight:500}
+.chip.b2b{background:var(--green);color:var(--ink)}
+.chip.b2c{background:var(--gold);color:var(--on-gold)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(96px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);font-size:.85rem;padding:.7rem 1.2rem;border-radius:999px;z-index:70;max-width:calc(100% - 32px);text-align:center}
+</style>
+</head>
+<body>
+
+
+<div class="review" id="review">
+  <div class="wrap">
+    <span><b>Versión de revisión.</b> Lo marcado <span class="pend">Pendiente</span> falta por completar: logo, foto de verduras, testimonios y precio final con IVA.</span>
+    <button type="button" id="hideReview">Ocultar marcas</button>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Los Valles, inicio">
+      <span class="name">Los Valles</span>
+      <span class="sub">Desde 2007</span>
+      <span class="pend" data-pend>Logo</span>
+    </a>
+    <nav class="main" id="nav" aria-label="Principal">
+      <a href="#productos">Productos</a>
+      <a href="#negocios">Para negocios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-gold" href="#contacto">Cotiza para tu negocio</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">Deshidratados · Rionegro, Antioquia</span>
+      <h1>La fruta, en su <b>mejor versión.</b></h1>
+      <p class="lede">Aromáticas, frutas, tomates y verduras 100% naturales. Sin azúcar añadida ni conservantes. Fruta de productores locales y proceso artesanal.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#contacto">Cotiza para tu negocio</a>
+        <a class="btn btn-line" href="#productos">Comprar para mi casa</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="img/aromaticas-sabores.jpg" alt="Cinco bowls con frutas deshidratadas de colores" width="771" height="1000" fetchpriority="high">
+    </figure>
+  </div>
+  <dl class="facts">
+    <div><dt>Desde 2007</dt><dd>Empresa familiar</dd></div>
+    <div><dt>+6 meses</dt><dd>De vida útil</dd></div>
+    <div><dt>Mar y jue</dt><dd>Entregas Medellín y Oriente</dd></div>
+    <div><dt>INVIMA</dt><dd>Registro sanitario</dd></div>
+  </dl>
+</section>
+
+<section class="block" id="productos">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div style="display:grid;gap:1rem"><span class="eyebrow">Productos</span><h2>Cinco líneas.<br>Todo natural.</h2></div>
+      <p class="muted">Toca una línea para ver presentaciones, precios y usos. Para tu casa, arma el pedido. Para tu negocio, cotiza por volumen.</p>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<section class="block biz" id="negocios">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div style="display:grid;gap:1rem"><span class="eyebrow">Restaurantes · cafés · hoteles · catering</span><h2>Un insumo que no falla.</h2></div>
+      <p class="muted">Te armamos el pedido según tu consumo y te lo llevamos cada semana. Trato directo con la familia.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit"><span class="k">+6 meses</span><b>Vida útil</b><p>Compras por volumen y reduces pérdidas en inventario.</p></div>
+      <div class="benefit"><span class="k">Lista para usar</span><b>Rendimiento</b><p>Sin pelar, cortar ni descartar. Abres la bolsa y sirves.</p></div>
+      <div class="benefit"><span class="k">Mismo sabor</span><b>Consistencia</b><p>Color, sabor y textura cuidados en cada lote.</p></div>
+      <div class="benefit"><span class="k">Mar y jue</span><b>Entrega semanal</b><p>Medellín y Oriente antioqueño.</p></div>
+    </div>
+    <div class="ideas">
+      <div class="idea"><img src="img/taza-manos.jpg" alt="Aromática de frutos rojos en taza" loading="lazy" width="96" height="120"><div><h3>Bebidas</h3><p>Aromáticas en porción individual, té helado e infusiones frías de la casa.</p></div></div>
+      <div class="idea"><img src="img/bowl-mixtura.jpg" alt="Mixtura de frutas deshidratadas" loading="lazy" width="96" height="120"><div><h3>Coctelería</h3><p>Rodajas de limón y naranja para decorar. Fruta para infusionar destilados.</p></div></div>
+      <div class="idea"><img src="img/tomate-frasco.jpg" alt="Tomate deshidratado en aceite" loading="lazy" width="96" height="120"><div><h3>Cocina</h3><p>Tomate en aceite para focaccias y pastas. Fruta para granolas y postres.</p></div></div>
+    </div>
+    <p class="formats">Presentaciones para negocio: aromáticas por 25 y 50 porciones · frutas, aromáticas y tomate por 500 g y 1 kg · rodajas de limón y naranja · mayonesa 4&amp;CO por litro · verduras bajo pedido.</p>
+    <div class="biz-cta">
+      <p>Cuéntanos qué preparas y cuánto consumes.</p>
+      <a class="btn btn-gold" href="#contacto">Cotiza para tu negocio</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="nosotros">
+  <div class="wrap">
+    <div class="about">
+      <div class="about-photo"><img src="img/caja-regalo.jpg" alt="Caja de regalo Los Valles con aromáticas surtidas" loading="lazy" width="605" height="1000"></div>
+      <div class="about-text">
+        <span class="eyebrow">Nosotros</span>
+        <h2>Una familia de Rionegro, desde 2007.</h2>
+        <p class="lead">Los Valles nació como empresa familiar y la siguen dirigiendo sus fundadores. Seleccionamos fruta de productores locales del Oriente antioqueño y la deshidratamos con un proceso artesanal para preservar su esencia.</p>
+        <ol class="steps">
+          <li><b>Selección</b><span>Fruta local, escogida por color, sabor y textura.</span></li>
+          <li><b>Preparación</b><span>Lavado y corte en nuestra planta.</span></li>
+          <li><b>Deshidratación</b><span>Sin azúcar añadida ni conservantes.</span></li>
+          <li><b>Trazabilidad</b><span>De principio a fin, con manejo responsable de residuos.</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="clients" id="clientes">
+      <span class="eyebrow">Confían en nosotros</span>
+      <div class="client-names">
+        <span>Las Tortas del Gordo</span>
+        <span>La Miguería</span>
+        <span>Pigasus</span>
+        <span class="pend" data-pend>Logos y testimonios de clientes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block contact" id="contacto">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Contacto</span>
+      <h2>Pide tu cotización.</h2>
+      <p class="muted">Llena estos datos y se abre WhatsApp con tu solicitud lista para enviar.</p>
+    </div>
+    <div class="contact-grid">
+      <form class="quote" id="quoteForm" novalidate>
+        <div class="field"><label for="q-nombre">Nombre</label><input type="text" id="q-nombre" autocomplete="name"></div>
+        <div class="field"><label for="q-negocio">Negocio</label><input type="text" id="q-negocio" autocomplete="organization" placeholder="Ej.: Café La Esquina"></div>
+        <div class="field"><label for="q-ciudad">Ciudad</label><input type="text" id="q-ciudad" placeholder="Ej.: Medellín"></div>
+        <div class="field"><label for="q-volumen">Volumen al mes</label>
+          <select id="q-volumen"><option value="">Selecciona</option><option>Menos de 2 kg</option><option>De 2 a 5 kg</option><option>De 5 a 15 kg</option><option>Más de 15 kg</option><option>Aún no sé</option></select></div>
+        <div class="field full"><span class="lbl" id="q-prod-l">Productos de interés</span>
+          <div class="checks" role="group" aria-labelledby="q-prod-l" id="q-productos">
+            <label><input type="checkbox" id="qp-arom" value="Aromáticas"> Aromáticas</label>
+            <label><input type="checkbox" id="qp-frut" value="Frutas"> Frutas</label>
+            <label><input type="checkbox" id="qp-citr" value="Rodajas de limón y naranja"> Limón y naranja</label>
+            <label><input type="checkbox" id="qp-tom" value="Tomates"> Tomates</label>
+            <label><input type="checkbox" id="qp-verd" value="Verduras"> Verduras</label>
+            <label><input type="checkbox" id="qp-4co" value="4&CO"> 4&amp;CO</label>
+          </div></div>
+        <p class="err full" id="q-err" role="alert"></p>
+        <div class="form-actions full">
+          <button type="submit" class="btn btn-gold" id="q-submit">Preparar solicitud</button>
+          <span class="note">Sin compromiso. Respondemos el mismo día hábil.</span>
+        </div>
+        <div class="done-panel full" id="q-done" hidden>
+          <h3>Tu solicitud está lista.</h3>
+          <p class="muted" id="q-done-txt">Toca el botón para enviarla por WhatsApp.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.6rem">
+            <a class="btn btn-wa" id="q-wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+            <button type="button" class="mini" id="q-new">Nueva solicitud</button>
+          </div>
+        </div>
+      </form>
+      <aside class="channels" aria-label="Canales de contacto">
+        <div class="channel"><span class="lbl">WhatsApp</span><span class="val">+57 310 374 2028</span>
+          <div class="row"><a class="mini" href="https://wa.me/573103742028" target="_blank" rel="noopener">Abrir chat</a><button class="mini" type="button" data-copy="+57 310 374 2028">Copiar</button></div></div>
+        <div class="channel"><span class="lbl">Instagram</span><span class="val">@losvalles_deshidratados</span>
+          <div class="row"><a class="mini" href="https://www.instagram.com/losvalles_deshidratados/" target="_blank" rel="noopener">Ver perfil</a></div></div>
+        <div class="channel"><span class="lbl">Correo</span><span class="val">info@losvalles.com.co</span>
+          <div class="row"><button class="mini" type="button" data-copy="info@losvalles.com.co">Copiar</button></div></div>
+        <div class="channel"><span class="lbl">Para tu casa</span><p>Arma tu pedido en <a href="#productos">Productos</a> o escríbenos por WhatsApp o Instagram. Entregamos martes y jueves.</p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="block admin" id="admin" hidden>
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Solo visible para el equipo</span><h2>Solicitudes recibidas</h2><p class="muted" id="adminNote">Cada cotización y pedido enviado desde la página queda guardado aquí.</p></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Fecha</th><th>Tipo</th><th>Cliente</th><th>Ciudad</th><th>Detalle</th><th>Estado</th></tr></thead>
+      <tbody id="adminRows"><tr><td colspan="6">Aún no hay solicitudes.</td></tr></tbody>
+    </table></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><div class="name">Los Valles</div><div>Productos deshidratados · Sector Aeropuerto JMC, Vda. Playa Rica – Rancherías, Rionegro</div></div>
+    <div style="display:grid;gap:.3rem">
+      <span>+57 310 374 2028 · info@losvalles.com.co</span>
+      <a href="https://www.instagram.com/losvalles_deshidratados/" target="_blank" rel="noopener">@losvalles_deshidratados</a>
+      <button class="admin-link" id="adminLink" type="button" hidden>Ver solicitudes recibidas</button>
+    </div>
+  </div>
+</footer>
+
+<div class="dock" aria-label="Acciones rápidas">
+  <button class="btn cartb" id="dockCart" type="button" aria-label="Ver tu pedido" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1.2 11H6.2L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cnt" id="dockN">0</span></button>
+  <a class="btn btn-gold" href="#contacto">Cotizar</a>
+  <a class="btn btn-wa" href="https://wa.me/573103742028?text=Hola%20Los%20Valles%2C%20quiero%20informaci%C3%B3n%20de%20sus%20productos." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>WhatsApp</a>
+</div>
+<div class="floats">
+  <button class="cart-pill" id="cartPill" type="button" hidden>Tu pedido <span class="n" id="cartN">0</span></button>
+  <a class="wa-float" href="https://wa.me/573103742028?text=Hola%20Los%20Valles%2C%20quiero%20informaci%C3%B3n%20de%20sus%20productos." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg></a>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="sheet" id="catSheet" hidden role="dialog" aria-modal="true" aria-labelledby="catTitle">
+  <div class="sheet-head"><h3 id="catTitle"></h3><button class="x" data-close aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="sheet-body" id="catBody"></div>
+</aside>
+<aside class="sheet" id="cartSheet" hidden role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+  <div class="sheet-head"><h3 id="cartTitle">Tu pedido</h3><button class="x" data-close aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="sheet-body">
+    <div id="cartLines"></div>
+    <div class="total"><span>Subtotal antes de IVA</span><span id="cartTotal">$0</span></div>
+    <p class="note">El envío se confirma por WhatsApp según tu municipio. <span class="pend" data-pend>Precio final con IVA</span></p>
+    <div class="field"><label for="c-nombre">Tu nombre</label><input type="text" id="c-nombre" autocomplete="name"></div>
+    <div class="field"><label for="c-ciudad">Municipio de entrega</label><input type="text" id="c-ciudad" placeholder="Ej.: Rionegro"></div>
+    <p class="err" id="c-err" role="alert"></p>
+  </div>
+  <div class="sheet-foot">
+    <button class="btn btn-gold" id="cartSend" type="button">Preparar pedido</button>
+    <a class="btn btn-wa" id="cartWa" href="#" target="_blank" rel="noopener" hidden>Enviar pedido por WhatsApp</a>
+  </div>
+</aside>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+const WA='573103742028';
+const fmt=n=>'$'+n.toLocaleString('es-CO');
+const $=s=>document.querySelector(s);
+let pendHidden=false;
+try{ pendHidden=localStorage.getItem('lv-hide-pend')==='1'; }catch(e){}
+
+const CATS=[
+  {id:'aromaticas',name:'Aromáticas',img:'img/aromaticas-porciones.jpg',alt:'Bolsas de aromáticas de frutas',
+   short:'Cinco sabores para preparar en agua caliente o fría.',
+   desc:'Mezclas de fruta deshidratada. Sabores: Frutos rojos, Tradicional, Frutos amarillos, Piña jengibre y Manzana canela.',
+   uses:['Aromática caliente','Té helado','Infusión fría','Cocteles sin alcohol','Regalo corporativo'],
+   items:[['Frutos rojos','Frasco de vidrio · 80 g',26500],['Tradicional','Frasco de vidrio · 90 g',26500],['Frutos amarillos','Frasco de vidrio · 100 g',24500],['Piña jengibre','Frasco de vidrio · 100 g',24500],['Manzana canela','Frasco de vidrio · 80 g',23000],['Aromáticas surtidas','Bolsa · 12 porciones',34000],['Caja de regalo','14 porciones surtidas',45000]],
+   biz:'Por 25 y 50 porciones individuales, o a granel por 500 g y 1 kg.',check:'qp-arom'},
+  {id:'frutas',name:'Frutas',img:'img/frutas.jpg',alt:'Rodajas de piña, mango, manzana y fresa deshidratadas',
+   short:'Rodajas crocantes, sin azúcar añadida.',
+   desc:'Rodajas y trozos de fruta 100% natural, con el color y el sabor de la fruta.',
+   uses:['Snack','Granola y yogur','Repostería','Decoración de bebidas','Loncheras'],
+   items:[['Mixtura','30 g · manzana, banano, fresa y pitahaya',8300],['Frutos amarillos','30 g',8300],['Banano','50 g',7800],['Uchuva','50 g',10500],['Piña','50 g',12000],['Mixtura','50 g',12000],['Fresa','50 g',16000],['Manzana','50 g',16500],['Mango','50 g',17000],['Pitahaya','50 g',19000],['Mixtura','85 g',23000]],
+   biz:'Por 500 g: manzana, fresa, piña, uchuva, pitahaya, mora y kiwi. Rodajas de limón y naranja para coctelería.',check:'qp-frut'},
+  {id:'tomates',name:'Tomates',img:'img/tomate-frasco.jpg',alt:'Frasco de tomate deshidratado en aceite',
+   short:'En rodajas o en aceite, listos para servir.',
+   desc:'Tomate deshidratado en rodajas, o conservado en aceite y listo para servir.',
+   uses:['Focaccias y panes','Pastas','Ensaladas','Tablas y sándwiches'],
+   items:[['Tomate en aceite','Frasco · 230 ml',34500],['Tomate en rodajas','Bolsa · 100 g',34500]],
+   biz:'Tomate en rodajas por 500 g para cocina.',check:'qp-tom'},
+  {id:'verduras',name:'Verduras',img:null,
+   short:'Bajo pedido, para cocina profesional.',
+   desc:'Zanahoria, pepino, cebolla, remolacha, kale, brócoli, coliflor, entre otros.',
+   uses:['Cremas y sopas','Bowls','Chips','Decoración de platos'],
+   items:[],onlyBiz:true,
+   biz:'Las verduras se producen bajo pedido. Cuéntanos cuáles necesitas y en qué cantidad.',check:'qp-verd'},
+  {id:'4co',name:'4&CO',img:'img/infusion-4co.jpg',alt:'Infusión de frutos rojos 4&CO',
+   short:'Infusión de frutos rojos y mayonesa de ajo dulce.',
+   desc:'Nuestra línea de marca.',
+   uses:['Infusión con leche o agua','Postres','Hamburguesas','Tablas'],
+   items:[['Infusión de frutos rojos','Bolsa · 150 g',26000],['Mayonesa de ajo dulce','Frasco · 230 ml',12500]],
+   biz:'Infusión por 500 g y mayonesa por litro.',check:'qp-4co'}
+];
+
+const cards=$('#cards');
+CATS.forEach(c=>{
+  const b=document.createElement('button');
+  b.type='button'; b.className='card'+(c.img?'':' noimg'); b.dataset.cat=c.id;
+  b.innerHTML=(c.img?`<img src="${c.img}" alt="${c.alt}" loading="lazy">`:`<span class="pend" data-pend>Foto pendiente</span>`)+
+    `<span class="ct"><b>${c.name}</b><span>${c.short}</span><i>${c.onlyBiz?'Cotizar':'Ver productos'} →</i></span>`;
+  b.addEventListener('click',()=>openCat(c.id));
+  cards.appendChild(b);
+});
+
+let lastFocus=null;
+function openSheet(el){ const prev=document.activeElement; closeSheets(true); lastFocus=prev; el.hidden=false; $('#scrim').hidden=false; document.body.style.overflow='hidden'; el.querySelector('[data-close]').focus(); }
+function closeSheets(silent){ ['#catSheet','#cartSheet'].forEach(s=>$(s).hidden=true); $('#scrim').hidden=true; document.body.style.overflow=''; if(!silent && lastFocus && lastFocus.focus) lastFocus.focus(); }
+document.addEventListener('click',e=>{ if(e.target.closest('[data-close]')||e.target.id==='scrim') closeSheets(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeSheets(); });
+
+const plus=d=>d?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg>':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>';
+let cart=[];
+function openCat(id){
+  const c=CATS.find(x=>x.id===id);
+  $('#catTitle').textContent=c.name;
+  const items=c.items.length?`
+    <div><div class="list-label"><span>Para tu casa</span><span>Antes de IVA</span></div>
+    <ul class="items">${c.items.map((it,k)=>{const key=c.id+'-'+k,inC=cart.some(l=>l.key===key);
+      return `<li class="item"><span class="nm">${it[0]}</span><span class="ds">${it[1]}</span><span class="pr">${fmt(it[2])}<small>+ IVA</small></span>
+      <button class="add${inC?' done':''}" type="button" data-key="${key}" aria-label="Agregar ${it[0]}, ${it[1]}">${plus(inC)}</button></li>`}).join('')}</ul>
+    <p class="note" style="margin-top:.6rem"><span class="pend" data-pend>Confirmar precio final con IVA</span></p></div>`:'';
+  $('#catBody').innerHTML=`<p class="muted">${c.desc}</p>
+    <div class="uses" aria-label="Usos sugeridos">${c.uses.map(u=>`<span>${u}</span>`).join('')}</div>
+    ${items}
+    <div class="biz-note"><span class="eyebrow">${c.onlyBiz?'Bajo pedido':'Para negocios'}</span><p>${c.biz}</p>
+      <a class="btn btn-line" href="#contacto" data-prefill="${c.check}">Cotizar ${c.name}</a></div>`;
+  applyPend(); openSheet($('#catSheet'));
+}
+$('#catBody').addEventListener('click',e=>{
+  const b=e.target.closest('.add');
+  if(b){ addToCart(b.dataset.key); b.classList.add('done'); b.innerHTML=plus(true); return; }
+  const p=e.target.closest('[data-prefill]');
+  if(p){ const cb=document.getElementById(p.dataset.prefill); if(cb) cb.checked=true; closeSheets(true); }
+});
+
+function findItem(key){const i=key.lastIndexOf('-');const c=CATS.find(x=>x.id===key.slice(0,i));const it=c.items[+key.slice(i+1)];return {cat:c.name,name:it[0],desc:it[1],price:it[2]};}
+function addToCart(key){ const l=cart.find(x=>x.key===key); if(l) l.q++; else cart.push({key,q:1,...findItem(key)}); renderCart(); toast('Agregado a tu pedido'); }
+function renderCart(){
+  const n=cart.reduce((a,l)=>a+l.q,0);
+  $('#cartN').textContent=n; $('#dockN').textContent=n;
+  $('#cartPill').hidden=n===0; $('#dockCart').hidden=n===0;
+  $('#cartLines').innerHTML=cart.length?cart.map(l=>`<div class="line"><span class="nm">${l.cat} · ${l.name}</span><span class="ds">${l.desc} · ${fmt(l.price)}</span>
+    <span class="qty"><button type="button" data-dec="${l.key}" aria-label="Quitar uno">−</button><span>${l.q}</span><button type="button" data-inc="${l.key}" aria-label="Agregar uno">+</button></span></div>`).join(''):'<p class="muted">Tu pedido está vacío.</p>';
+  $('#cartTotal').textContent=fmt(cart.reduce((a,l)=>a+l.q*l.price,0));
+  $('#cartWa').hidden=true; $('#cartSend').hidden=false;
+}
+$('#cartLines').addEventListener('click',e=>{
+  const d=e.target.dataset;
+  if(d.inc) cart.find(l=>l.key===d.inc).q++;
+  else if(d.dec){ const l=cart.find(x=>x.key===d.dec); l.q--; if(l.q<=0) cart=cart.filter(x=>x!==l); }
+  else return;
+  renderCart();
+});
+$('#cartPill').onclick=$('#dockCart').onclick=()=>openSheet($('#cartSheet'));
+$('#cartSend').onclick=async()=>{
+  const nombre=$('#c-nombre').value.trim(), ciudad=$('#c-ciudad').value.trim();
+  if(!cart.length){ $('#c-err').textContent='Agrega al menos un producto.'; return; }
+  if(!nombre||!ciudad){ $('#c-err').textContent='Escribe tu nombre y el municipio de entrega.'; return; }
+  $('#c-err').textContent='';
+  const total=cart.reduce((a,l)=>a+l.q*l.price,0);
+  const txt=`Hola Los Valles, quiero hacer un pedido:\n${cart.map(l=>`• ${l.q} x ${l.cat} ${l.name} (${l.desc}) - ${fmt(l.price*l.q)}`).join('\n')}\nSubtotal antes de IVA: ${fmt(total)}\n\nNombre: ${nombre}\nMunicipio: ${ciudad}`;
+  $('#cartWa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(txt);
+  $('#cartWa').hidden=false; $('#cartSend').hidden=true;
+  await save({tipo:'pedido',nombre,ciudad,negocio:'',detalle:cart.map(l=>`${l.q} x ${l.cat} ${l.name} (${l.desc})`).join('; '),total});
+};
+
+$('#quoteForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const v=id=>$('#'+id).value.trim();
+  const prods=[...document.querySelectorAll('#q-productos input:checked')].map(i=>i.value);
+  const miss=[]; if(!v('q-nombre'))miss.push('nombre'); if(!v('q-negocio'))miss.push('negocio'); if(!v('q-ciudad'))miss.push('ciudad'); if(!prods.length)miss.push('al menos un producto');
+  if(miss.length){ $('#q-err').textContent='Falta completar: '+miss.join(', ')+'.'; return; }
+  $('#q-err').textContent='';
+  const d={tipo:'cotizacion',nombre:v('q-nombre'),negocio:v('q-negocio'),ciudad:v('q-ciudad'),productos:prods,volumen:$('#q-volumen').value||'No indicado'};
+  const txt=`Hola Los Valles, quiero una cotización para mi negocio.\n\nNombre: ${d.nombre}\nNegocio: ${d.negocio}\nCiudad: ${d.ciudad}\nProductos: ${prods.join(', ')}\nVolumen aproximado al mes: ${d.volumen}`;
+  $('#q-wa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(txt);
+  $('#q-submit').disabled=true;
+  const ok=await save({...d,detalle:prods.join(', ')+' · '+d.volumen});
+  $('#q-done-txt').textContent=ok?'Quedó registrada. Toca el botón para enviarla por WhatsApp.':'Toca el botón para enviarla por WhatsApp.';
+  $('#q-done').hidden=false; $('#q-submit').disabled=false;
+});
+$('#q-new').onclick=()=>{ $('#quoteForm').reset(); $('#q-done').hidden=true; };
+
+let db=null;
+async function save(rec){
+  if(!db) return false;
+  try{ const id=new Date().toISOString().replace(/[:.]/g,'-')+'-'+Math.random().toString(36).slice(2,7);
+    await db.doc('solicitudes/'+id).set({...rec,fecha:new Date().toISOString(),estado:'nueva'}); return true; }
+  catch(err){ return false; }
+}
+(async()=>{
+  if(!window.claude || !window.claude.use) return;
+  try{ db=await window.claude.use('db'); }catch(e){ db=null; }
+  let user=null; try{ user=await window.claude.use('user'); }catch(e){}
+  const canEdit=user?await user.canEdit().catch(()=>false):false;
+  if(!db||!canEdit) return;
+  $('#adminLink').hidden=false;
+  $('#adminLink').onclick=()=>{ $('#admin').hidden=false; $('#admin').scrollIntoView({behavior:'smooth'}); };
+  db.collection('solicitudes').orderBy('fecha','desc').limit(200).onSnapshot(snap=>{
+    const rows=snap.docs.map(d=>({id:d.id,...d.data()}));
+    $('#adminNote').textContent=rows.length?`${rows.length} solicitud${rows.length===1?'':'es'} guardada${rows.length===1?'':'s'}.`:'Cada cotización y pedido enviado desde la página queda guardado aquí.';
+    const tb=$('#adminRows');
+    if(!rows.length){ tb.innerHTML='<tr><td colspan="6">Aún no hay solicitudes.</td></tr>'; return; }
+    tb.innerHTML='';
+    rows.forEach(r=>{
+      const tr=document.createElement('tr'); const f=new Date(r.fecha);
+      const cells=[f.toLocaleDateString('es-CO',{day:'2-digit',month:'short'})+' '+f.toLocaleTimeString('es-CO',{hour:'2-digit',minute:'2-digit'}),null,(r.nombre||'')+(r.negocio?' · '+r.negocio:''),r.ciudad||'',(r.detalle||'')+(r.total?' · '+fmt(r.total):''),null];
+      cells.forEach((c,i)=>{ const td=document.createElement('td');
+        if(i===1) td.innerHTML=r.tipo==='pedido'?'<span class="chip b2c">Pedido hogar</span>':'<span class="chip b2b">Cotización</span>';
+        else if(i===5){ const b=document.createElement('button'); b.className='mini'; b.type='button'; b.textContent=r.estado==='atendida'?'Atendida ✓':'Marcar atendida';
+          b.onclick=async()=>{ try{ await db.doc('solicitudes/'+r.id).update({estado:r.estado==='atendida'?'nueva':'atendida'}); }catch(e){ toast('No se pudo actualizar. Intenta de nuevo.'); } }; td.appendChild(b); }
+        else td.textContent=c;
+        tr.appendChild(td); });
+      tb.appendChild(tr);
+    });
+  },()=>{ $('#adminNote').textContent='No se pudieron cargar las solicitudes en esta vista.'; });
+})();
+
+let tt; function toast(m){ const t=$('#toast'); t.textContent=m; t.hidden=false; clearTimeout(tt); tt=setTimeout(()=>t.hidden=true,1800); }
+document.addEventListener('click',async e=>{
+  const c=e.target.closest('[data-copy]'); if(!c) return;
+  try{ await navigator.clipboard.writeText(c.dataset.copy); toast('Copiado'); }
+  catch(err){ const val=c.closest('.channel').querySelector('.val'); const r=document.createRange(); r.selectNodeContents(val); const s=getSelection(); s.removeAllRanges(); s.addRange(r); toast('Selecciona y copia'); }
+});
+const nav=$('#nav'),mb=$('#menuBtn');
+mb.onclick=()=>{ const o=!nav.classList.contains('open'); nav.classList.toggle('open',o); mb.setAttribute('aria-expanded',o); };
+nav.addEventListener('click',e=>{ if(e.target.tagName==='A'){ nav.classList.remove('open'); mb.setAttribute('aria-expanded',false);} });
+function applyPend(){ document.querySelectorAll('[data-pend]').forEach(el=>el.hidden=pendHidden); $('#review').hidden=pendHidden; }
+$('#hideReview').onclick=()=>{ pendHidden=true; try{localStorage.setItem('lv-hide-pend','1');}catch(e){} applyPend(); };
+applyPend(); renderCart();
+})();
+</script>
+
+</body>
+</html>
