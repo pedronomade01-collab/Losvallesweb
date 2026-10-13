@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
 <style>
 /* Layout: vitrina nocturna. Un solo tema oscuro a propósito: verde noche, crema y dorado; la fruta pone el color.
-   Hero foto + titular superpuesto · 5 tarjetas que abren su detalle · negocios en una franja · nosotros+clientes · cotiza. */
+   Hero foto + titular superpuesto · 5 tarjetas que abren su detalle · negocios en una franja · nosotros · cotiza. */
 :root{
   --bg:#0F1F16; --bg-2:#132820; --surface:#1A3326; --surface-2:#21402F;
   --ink:#F3EDE0; --muted:#B8B9A9; --line:#2C4636;
@@ -147,7 +147,9 @@ section.block{padding-block:clamp(4rem,9vw,7rem)}
 .benefit b{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
 .benefit p{font-size:.92rem;color:var(--muted)}
 @media (max-width:900px){.benefits{grid-template-columns:repeat(2,minmax(0,1fr))}.benefit:nth-child(3){padding-left:0;border-left:0}.benefit:nth-child(n+3){border-top:1px solid var(--line)}}
-.ideas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.4rem);margin-top:clamp(2rem,5vw,3rem)}
+.hero-eyebrow{font-size:.84rem;letter-spacing:.3em}
+.ideas-title{font-size:clamp(1.9rem,4vw,2.6rem);margin-top:clamp(2.5rem,6vw,3.5rem)}
+.ideas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.4rem);margin-top:1.4rem}
 .idea{display:grid;grid-template-columns:96px minmax(0,1fr);gap:1rem;align-items:start;min-width:0}
 .idea img{width:96px;height:120px;object-fit:cover;border-radius:var(--r)}
 .idea h3{font-size:1.6rem;margin-bottom:.4rem}
@@ -245,7 +247,7 @@ footer a{color:var(--muted)}
 
 <div class="review" id="review">
   <div class="wrap">
-    <span><b>Versión de revisión.</b> Lo marcado <span class="pend">Pendiente</span> falta por completar: logo, foto de verduras, testimonios y precio final con IVA.</span>
+    <span><b>Versión de revisión.</b> Lo marcado <span class="pend">Pendiente</span> falta por completar: logo, foto de verduras y precio final con IVA.</span>
     <button type="button" id="hideReview">Ocultar marcas</button>
   </div>
 </div>
@@ -276,12 +278,12 @@ footer a{color:var(--muted)}
 <section class="hero" id="inicio">
   <div class="hero-grid">
     <div class="hero-text">
-      <span class="eyebrow">Deshidratados · Rionegro, Antioquia</span>
-      <h1>La fruta, en su <b>mejor versión.</b></h1>
-      <p class="lede">Aromáticas, frutas, tomates y verduras 100% naturales. Sin azúcar añadida ni conservantes. Fruta de productores locales y proceso artesanal.</p>
+      <span class="eyebrow hero-eyebrow">Deshidratados · Rionegro, Antioquia</span>
+      <h1>Fruta deshidratada, en su <b>mejor versión.</b></h1>
+      <p class="lede">Aromáticas, frutas, tomates y verduras 100% naturales, sin azúcar añadida. Fruta de productores locales. Proceso artesanal y estandarizado.</p>
       <div class="ctas">
         <a class="btn btn-gold" href="#contacto">Cotiza para tu negocio</a>
-        <a class="btn btn-line" href="#productos">Comprar para mi casa</a>
+        <a class="btn btn-line" href="#productos">Compra para tu casa</a>
       </div>
     </div>
     <figure class="hero-photo">
@@ -291,7 +293,7 @@ footer a{color:var(--muted)}
   <dl class="facts">
     <div><dt>Desde 2007</dt><dd>Empresa familiar</dd></div>
     <div><dt>+6 meses</dt><dd>De vida útil</dd></div>
-    <div><dt>Mar y jue</dt><dd>Entregas Medellín y Oriente</dd></div>
+    <div><dt>Mar. y Jue.</dt><dd>Entregas Medellín y Oriente</dd></div>
     <div><dt>INVIMA</dt><dd>Registro sanitario</dd></div>
   </dl>
 </section>
@@ -299,8 +301,8 @@ footer a{color:var(--muted)}
 <section class="block" id="productos">
   <div class="wrap">
     <div class="sec-head split">
-      <div style="display:grid;gap:1rem"><span class="eyebrow">Productos</span><h2>Cinco líneas.<br>Todo natural.</h2></div>
-      <p class="muted">Toca una línea para ver presentaciones, precios y usos. Para tu casa, arma el pedido. Para tu negocio, cotiza por volumen.</p>
+      <div style="display:grid;gap:1rem"><span class="eyebrow">Productos</span><h2>Cinco líneas.<br>Una misma esencia.</h2></div>
+      <p class="muted">Encuentra en cada una presentaciones, precios y usos sugeridos. Para tu casa, arma el pedido. Para tu negocio, cotiza por volumen.</p>
     </div>
     <div class="cards" id="cards"></div>
   </div>
@@ -310,17 +312,18 @@ footer a{color:var(--muted)}
   <div class="wrap">
     <div class="sec-head split">
       <div style="display:grid;gap:1rem"><span class="eyebrow">Restaurantes · cafés · hoteles · catering</span><h2>Un insumo que no falla.</h2></div>
-      <p class="muted">Te armamos el pedido según tu consumo y te lo llevamos cada semana. Trato directo con la familia.</p>
+      <p class="muted">Te armamos el pedido según tu consumo y te lo llevamos cada semana, martes y jueves. Trato directo con la familia: para nosotros, el servicio es lo más importante.</p>
     </div>
     <div class="benefits">
       <div class="benefit"><span class="k">+6 meses</span><b>Vida útil</b><p>Compras por volumen y reduces pérdidas en inventario.</p></div>
       <div class="benefit"><span class="k">Lista para usar</span><b>Rendimiento</b><p>Sin pelar, cortar ni descartar. Abres la bolsa y sirves.</p></div>
       <div class="benefit"><span class="k">Mismo sabor</span><b>Consistencia</b><p>Color, sabor y textura cuidados en cada lote.</p></div>
-      <div class="benefit"><span class="k">Mar y jue</span><b>Entrega semanal</b><p>Medellín y Oriente antioqueño.</p></div>
+      <div class="benefit"><span class="k">Martes y jueves</span><b>Entrega semanal</b><p>Medellín y Oriente antioqueño.</p></div>
     </div>
+    <h3 class="ideas-title">Ideas para tu negocio</h3>
     <div class="ideas">
-      <div class="idea"><img src="img/taza-manos.jpg" alt="Aromática de frutos rojos en taza" loading="lazy" width="96" height="120"><div><h3>Bebidas</h3><p>Aromáticas en porción individual, té helado e infusiones frías de la casa.</p></div></div>
-      <div class="idea"><img src="img/bowl-mixtura.jpg" alt="Mixtura de frutas deshidratadas" loading="lazy" width="96" height="120"><div><h3>Coctelería</h3><p>Rodajas de limón y naranja para decorar. Fruta para infusionar destilados.</p></div></div>
+      <div class="idea"><img src="img/hero-taza.jpg" alt="Aromática de frutas en taza de vidrio" loading="lazy" width="96" height="120"><div><h3>Bebidas</h3><p>Aromáticas en porción individual, té helado e infusiones frías de la casa.</p></div></div>
+      <div class="idea"><img src="img/frutas.jpg" alt="Rodajas de fruta deshidratada" loading="lazy" width="96" height="120"><div><h3>Coctelería</h3><p>Rodajas de limón y naranja para decorar. Fruta para infusionar destilados.</p></div></div>
       <div class="idea"><img src="img/tomate-frasco.jpg" alt="Tomate deshidratado en aceite" loading="lazy" width="96" height="120"><div><h3>Cocina</h3><p>Tomate en aceite para focaccias y pastas. Fruta para granolas y postres.</p></div></div>
     </div>
     <p class="formats">Presentaciones para negocio: aromáticas por 25 y 50 porciones · frutas, aromáticas y tomate por 500 g y 1 kg · rodajas de limón y naranja · mayonesa 4&amp;CO por litro · verduras bajo pedido.</p>
@@ -338,22 +341,13 @@ footer a{color:var(--muted)}
       <div class="about-text">
         <span class="eyebrow">Nosotros</span>
         <h2>Una familia de Rionegro, desde 2007.</h2>
-        <p class="lead">Los Valles nació como empresa familiar y la siguen dirigiendo sus fundadores. Seleccionamos fruta de productores locales del Oriente antioqueño y la deshidratamos con un proceso artesanal para preservar su esencia.</p>
+        <p class="lead">Los Valles nació como empresa familiar y la siguen dirigiendo sus fundadores. Seleccionamos fruta de productores locales del Oriente antioqueño y la deshidratamos con un proceso artesanal y estandarizado para preservar su esencia.</p>
         <ol class="steps">
           <li><b>Selección</b><span>Fruta local, escogida por color, sabor y textura.</span></li>
           <li><b>Preparación</b><span>Lavado y corte en nuestra planta.</span></li>
-          <li><b>Deshidratación</b><span>Sin azúcar añadida ni conservantes.</span></li>
+          <li><b>Deshidratación</b><span>Artesanal y estandarizada, sin azúcar añadida.</span></li>
           <li><b>Trazabilidad</b><span>De principio a fin, con manejo responsable de residuos.</span></li>
         </ol>
-      </div>
-    </div>
-    <div class="clients" id="clientes">
-      <span class="eyebrow">Confían en nosotros</span>
-      <div class="client-names">
-        <span>Las Tortas del Gordo</span>
-        <span>La Miguería</span>
-        <span>Pigasus</span>
-        <span class="pend" data-pend>Logos y testimonios de clientes</span>
       </div>
     </div>
   </div>
@@ -434,7 +428,7 @@ footer a{color:var(--muted)}
 <div class="dock" aria-label="Acciones rápidas">
   <button class="btn cartb" id="dockCart" type="button" aria-label="Ver tu pedido" hidden>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1.2 11H6.2L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cnt" id="dockN">0</span></button>
-  <a class="btn btn-gold" href="#contacto">Cotizar</a>
+  <a class="btn btn-gold" href="#contacto">Cotiza</a>
   <a class="btn btn-wa" href="https://wa.me/573103742028?text=Hola%20Los%20Valles%2C%20quiero%20informaci%C3%B3n%20de%20sus%20productos." target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>WhatsApp</a>
 </div>
@@ -482,10 +476,10 @@ const CATS=[
    items:[['Frutos rojos','Frasco de vidrio · 80 g',26500],['Tradicional','Frasco de vidrio · 90 g',26500],['Frutos amarillos','Frasco de vidrio · 100 g',24500],['Piña jengibre','Frasco de vidrio · 100 g',24500],['Manzana canela','Frasco de vidrio · 80 g',23000],['Aromáticas surtidas','Bolsa · 12 porciones',34000],['Caja de regalo','14 porciones surtidas',45000]],
    biz:'Por 25 y 50 porciones individuales, o a granel por 500 g y 1 kg.',check:'qp-arom'},
   {id:'frutas',name:'Frutas',img:'img/frutas.jpg',alt:'Rodajas de piña, mango, manzana y fresa deshidratadas',
-   short:'Rodajas crocantes, sin azúcar añadida.',
-   desc:'Rodajas y trozos de fruta 100% natural, con el color y el sabor de la fruta.',
+   short:'Rodajas con el verdadero sabor de la fruta.',
+   desc:'Fruta 100% natural, sin azúcar añadida. Conserva el color y el verdadero sabor de la fruta.',
    uses:['Snack','Granola y yogur','Repostería','Decoración de bebidas','Loncheras'],
-   items:[['Mixtura','30 g · manzana, banano, fresa y pitahaya',8300],['Frutos amarillos','30 g',8300],['Banano','50 g',7800],['Uchuva','50 g',10500],['Piña','50 g',12000],['Mixtura','50 g',12000],['Fresa','50 g',16000],['Manzana','50 g',16500],['Mango','50 g',17000],['Pitahaya','50 g',19000],['Mixtura','85 g',23000]],
+   items:[['Frutos amarillos','30 g',8300],['Banano','50 g',7800],['Uchuva','50 g',10500],['Piña','50 g',12000],['Fresa','50 g',16000],['Manzana','50 g',16500],['Mango','50 g',17000],['Pitahaya','50 g',19000]],
    biz:'Por 500 g: manzana, fresa, piña, uchuva, pitahaya, mora y kiwi. Rodajas de limón y naranja para coctelería.',check:'qp-frut'},
   {id:'tomates',name:'Tomates',img:'img/tomate-frasco.jpg',alt:'Frasco de tomate deshidratado en aceite',
    short:'En rodajas o en aceite, listos para servir.',
@@ -500,8 +494,8 @@ const CATS=[
    items:[],onlyBiz:true,
    biz:'Las verduras se producen bajo pedido. Cuéntanos cuáles necesitas y en qué cantidad.',check:'qp-verd'},
   {id:'4co',name:'4&CO',img:'img/infusion-4co.jpg',alt:'Infusión de frutos rojos 4&CO',
-   short:'Infusión de frutos rojos y mayonesa de ajo dulce.',
-   desc:'Nuestra línea de marca.',
+   short:'Productos exclusivos, con nuestra fruta como base.',
+   desc:'Productos exclusivos creados para tu negocio y tu casa, con nuestra fruta deshidratada como base: infusión de frutos rojos y mayonesa de ajo dulce.',
    uses:['Infusión con leche o agua','Postres','Hamburguesas','Tablas'],
    items:[['Infusión de frutos rojos','Bolsa · 150 g',26000],['Mayonesa de ajo dulce','Frasco · 230 ml',12500]],
    biz:'Infusión por 500 g y mayonesa por litro.',check:'qp-4co'}
