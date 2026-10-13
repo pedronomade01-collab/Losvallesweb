@@ -1,0 +1,313 @@
+[
+  {
+    "slug": "latte-frutos-rojos",
+    "titulo": "Latte de frutos rojos",
+    "grupo": "Bebidas", "sub": "Calientes",
+    "intro": "Una bebida caliente, cremosa y de color intenso, hecha con nuestra infusión de frutos rojos 4&CO.",
+    "tiempo": 10, "porciones": "2 tazas", "dificultad": "Fácil",
+    "productos": [{"nombre": "Infusión de frutos rojos 4&CO", "detalle": "Bolsa · 150 g", "tipo": "casa"}],
+    "ingredientes": [
+      "2 cucharadas (15 g) de infusión de frutos rojos 4&CO",
+      "200 ml de agua",
+      "300 ml de leche entera o vegetal",
+      "Miel o panela al gusto (opcional)"
+    ],
+    "pasos": [
+      "Hierve el agua, apaga el fuego y agrega la infusión.",
+      "Tapa y deja reposar 5 minutos. Cuela presionando la fruta con una cuchara.",
+      "Calienta la leche sin dejarla hervir y espúmala con un batidor o espumador.",
+      "Sirve mitad infusión y mitad leche. Endulza si quieres."
+    ],
+    "tip": "Si quieres un color más intenso, deja reposar la infusión 8 minutos en lugar de 5.",
+    "negocio": "Prepara al inicio del turno un concentrado con 1 litro de agua y 75 g de infusión. Mantenlo refrigerado y úsalo durante el día: cada latte lleva 100 ml de concentrado y 150 ml de leche."
+  },
+  {
+    "slug": "te-helado-pina-jengibre",
+    "titulo": "Té helado de piña jengibre",
+    "grupo": "Bebidas", "sub": "Frías y té helado",
+    "intro": "Refrescante, con el dulzor de la piña y un toque picante de jengibre. Ideal para la tarde o para acompañar el almuerzo.",
+    "tiempo": 15, "tiempoExtra": "+ 1 h de enfriado", "porciones": "1 litro", "dificultad": "Fácil",
+    "productos": [{"nombre": "Aromática Piña jengibre", "detalle": "Frasco de vidrio · 100 g", "tipo": "casa"}],
+    "ingredientes": [
+      "4 cucharadas (20 g) de aromática de piña jengibre",
+      "1 litro de agua (500 ml caliente y 500 ml fría)",
+      "Miel o panela al gusto (opcional)",
+      "Hielo"
+    ],
+    "pasos": [
+      "Hierve 500 ml de agua, apaga el fuego y agrega la aromática.",
+      "Deja reposar 8 minutos y cuela presionando la fruta.",
+      "Agrega los 500 ml de agua fría y endulza si quieres.",
+      "Refrigera al menos 1 hora. Sirve con hielo y algunos trozos de fruta de la aromática."
+    ],
+    "tip": "Endulza mientras la infusión está caliente: la miel o la panela se disuelven mejor.",
+    "negocio": "Para un dispensador de 5 litros usa 100 g de aromática. Infusiona en 2,5 litros de agua caliente y completa con 2,5 litros de agua fría."
+  },
+  {
+    "slug": "gin-tonic-naranja",
+    "titulo": "Gin tonic con naranja deshidratada",
+    "grupo": "Bebidas", "sub": "Coctelería",
+    "intro": "Un clásico con presentación de barra: la rodaja de naranja aromatiza el trago mientras se hidrata en el vaso.",
+    "tiempo": 5, "porciones": "1 coctel", "dificultad": "Fácil",
+    "productos": [
+      {"nombre": "Rodajas de naranja deshidratada", "detalle": "Para negocios", "tipo": "negocio"},
+      {"nombre": "Aromática Frutos rojos", "detalle": "Frasco de vidrio · 80 g", "tipo": "casa"}
+    ],
+    "ingredientes": [
+      "50 ml de gin",
+      "150 ml de agua tónica fría",
+      "2 rodajas de naranja deshidratada",
+      "1 cucharadita de aromática de frutos rojos (opcional)",
+      "Hielo"
+    ],
+    "pasos": [
+      "Llena una copa balón con hielo y revuelve para enfriarla. Bota el agua que suelte.",
+      "Agrega el gin y la aromática de frutos rojos, si la usas.",
+      "Sirve la tónica despacio, por el borde de la copa, para que no pierda gas.",
+      "Decora con las rodajas de naranja y sirve."
+    ],
+    "tip": "Pon una rodaja dentro del trago y otra en el borde de la copa: una aromatiza y la otra se ve.",
+    "negocio": "Las rodajas deshidratadas no se dañan en la barra como la fruta fresca, así que puedes tenerlas listas todo el turno. Cotiza las rodajas de naranja y limón por volumen."
+  },
+  {
+    "slug": "granola-mango-uchuva",
+    "titulo": "Granola casera con mango y uchuva",
+    "grupo": "Desayunos y snacks", "sub": "Granolas",
+    "intro": "Granola horneada en casa, con trozos de mango y uchuva que le dan dulzor y acidez.",
+    "tiempo": 35, "porciones": "8 porciones", "dificultad": "Fácil",
+    "productos": [
+      {"nombre": "Mango deshidratado", "detalle": "50 g", "tipo": "casa"},
+      {"nombre": "Uchuva deshidratada", "detalle": "50 g", "tipo": "casa"}
+    ],
+    "ingredientes": [
+      "300 g de avena en hojuelas",
+      "60 g de almendras o maní picado",
+      "60 ml de aceite de coco derretido",
+      "80 ml de miel",
+      "1 cucharadita de canela en polvo",
+      "1 pizca de sal",
+      "50 g de mango deshidratado picado",
+      "50 g de uchuva deshidratada"
+    ],
+    "pasos": [
+      "Precalienta el horno a 160 °C.",
+      "Mezcla la avena, las almendras, la canela y la sal. Agrega el aceite y la miel y revuelve hasta cubrir todo.",
+      "Extiende en una bandeja con papel de hornear y hornea 20 a 25 minutos, revolviendo a la mitad.",
+      "Deja enfriar por completo y agrega el mango y la uchuva al final.",
+      "Guarda en un frasco bien cerrado."
+    ],
+    "tip": "La fruta va después de hornear: así conserva su color y su sabor.",
+    "negocio": "Para desayunos de hotel o cafetería, multiplica la receta por 5 y hornea en varias bandejas. La fruta se agrega solo al momento de envasar."
+  },
+  {
+    "slug": "bowl-yogur-fresa",
+    "titulo": "Bowl de yogur con fresa",
+    "grupo": "Desayunos y snacks", "sub": "Bowls y yogur",
+    "intro": "Un desayuno en cinco minutos, con fresa deshidratada que aporta color y sabor de fruta todo el año.",
+    "tiempo": 5, "porciones": "1 bowl", "dificultad": "Fácil",
+    "productos": [{"nombre": "Fresa deshidratada", "detalle": "50 g", "tipo": "casa"}],
+    "ingredientes": [
+      "200 g de yogur griego natural",
+      "15 g de fresa deshidratada",
+      "2 cucharadas de granola",
+      "1 cucharadita de miel",
+      "1 cucharadita de semillas de chía"
+    ],
+    "pasos": [
+      "Sirve el yogur en un bowl.",
+      "Agrega la granola y la chía.",
+      "Pon la fresa encima y termina con un hilo de miel."
+    ],
+    "tip": "Desmorona con los dedos algunas fresas sobre el yogur: le dan un color rosado muy bonito.",
+    "negocio": "Para servir en cafetería, arma los toppings en porciones de 15 g de fresa al inicio del día y móntalo al momento del pedido."
+  },
+  {
+    "slug": "avena-nocturna-manzana",
+    "titulo": "Avena nocturna con manzana y canela",
+    "grupo": "Desayunos y snacks", "sub": "Bowls y yogur",
+    "intro": "Se prepara en la noche y en la mañana está lista. La manzana se hidrata en el frasco y queda suave.",
+    "tiempo": 5, "tiempoExtra": "+ 1 noche en la nevera", "porciones": "1 frasco", "dificultad": "Fácil",
+    "productos": [{"nombre": "Manzana deshidratada", "detalle": "50 g", "tipo": "casa"}],
+    "ingredientes": [
+      "50 g de avena en hojuelas",
+      "150 ml de leche",
+      "80 g de yogur natural",
+      "1 cucharadita de chía",
+      "15 g de manzana deshidratada picada",
+      "Canela en polvo al gusto"
+    ],
+    "pasos": [
+      "Mezcla en un frasco la avena, la leche, el yogur y la chía.",
+      "Agrega la manzana picada y la canela y revuelve.",
+      "Tapa y refrigera toda la noche.",
+      "En la mañana revuelve y, si quieres, agrega unas rodajas más de manzana encima."
+    ],
+    "tip": "Guarda unas rodajas de manzana sin hidratar para poner encima al servir.",
+    "negocio": "Funciona muy bien como producto para llevar en vitrina: prepara los frascos el día anterior y rotúlalos con la fecha."
+  },
+  {
+    "slug": "torta-banano",
+    "titulo": "Torta de banano",
+    "grupo": "Repostería", "sub": "Tortas y panes dulces",
+    "intro": "Una torta húmeda de banano maduro, terminada con banano deshidratado que queda dorado al hornear.",
+    "tiempo": 70, "porciones": "1 molde (10 porciones)", "dificultad": "Media",
+    "productos": [{"nombre": "Banano deshidratado", "detalle": "50 g", "tipo": "casa"}],
+    "ingredientes": [
+      "3 bananos muy maduros",
+      "2 huevos",
+      "100 g de azúcar morena",
+      "80 ml de aceite vegetal",
+      "1 cucharadita de vainilla",
+      "200 g de harina de trigo",
+      "1 cucharadita de polvo de hornear",
+      "½ cucharadita de bicarbonato",
+      "1 pizca de sal",
+      "30 g de banano deshidratado"
+    ],
+    "pasos": [
+      "Precalienta el horno a 175 °C y engrasa un molde rectangular.",
+      "Tritura los bananos con un tenedor. Agrega los huevos, el azúcar, el aceite y la vainilla y mezcla.",
+      "Agrega la harina, el polvo de hornear, el bicarbonato y la sal. Mezcla solo hasta integrar.",
+      "Pica la mitad del banano deshidratado e incorpóralo a la mezcla.",
+      "Vierte en el molde, pon el resto del banano deshidratado encima y hornea 50 a 55 minutos, hasta que un palillo salga limpio."
+    ],
+    "tip": "No mezcles de más cuando agregues la harina: la torta queda más húmeda.",
+    "negocio": "Para vitrina, hornea en molde grande y corta en porciones. El banano deshidratado encima ayuda a que cada porción se vea igual."
+  },
+  {
+    "slug": "galletas-avena-pitahaya",
+    "titulo": "Galletas de avena y pitahaya",
+    "grupo": "Repostería", "sub": "Galletas",
+    "intro": "Galletas de avena con trozos de pitahaya deshidratada: dulces, con textura y con un color diferente.",
+    "tiempo": 30, "porciones": "20 galletas", "dificultad": "Fácil",
+    "productos": [{"nombre": "Pitahaya deshidratada", "detalle": "50 g", "tipo": "casa"}],
+    "ingredientes": [
+      "115 g de mantequilla a temperatura ambiente",
+      "100 g de azúcar morena",
+      "1 huevo",
+      "1 cucharadita de vainilla",
+      "150 g de harina de trigo",
+      "100 g de avena en hojuelas",
+      "½ cucharadita de polvo de hornear",
+      "1 pizca de sal",
+      "40 g de pitahaya deshidratada picada"
+    ],
+    "pasos": [
+      "Precalienta el horno a 180 °C.",
+      "Bate la mantequilla con el azúcar hasta que esté cremosa. Agrega el huevo y la vainilla.",
+      "Incorpora la harina, la avena, el polvo de hornear y la sal. Al final agrega la pitahaya.",
+      "Forma bolitas, ponlas separadas en una bandeja con papel de hornear y aplánalas un poco.",
+      "Hornea 10 a 12 minutos, hasta que los bordes estén dorados. Deja enfriar en la bandeja."
+    ],
+    "tip": "Pica la pitahaya con tijeras de cocina: es más fácil que con cuchillo.",
+    "negocio": "La masa se puede porcionar y congelar. Hornea directo del congelador agregando 2 minutos."
+  },
+  {
+    "slug": "decoracion-rodajas-citricas",
+    "titulo": "Torta decorada con rodajas cítricas",
+    "grupo": "Repostería", "sub": "Decoración",
+    "intro": "Una forma sencilla de darle a cualquier torta una presentación de pastelería, con rodajas de naranja y limón y fresa deshidratada.",
+    "tiempo": 15, "porciones": "1 torta", "dificultad": "Fácil",
+    "productos": [
+      {"nombre": "Rodajas de naranja y limón", "detalle": "Para negocios", "tipo": "negocio"},
+      {"nombre": "Fresa deshidratada", "detalle": "50 g", "tipo": "casa"}
+    ],
+    "ingredientes": [
+      "1 torta cubierta con crema o ganache, ya fría",
+      "6 a 8 rodajas de naranja deshidratada",
+      "4 rodajas de limón deshidratado",
+      "2 cucharadas de fresa deshidratada",
+      "Azúcar glas para espolvorear (opcional)"
+    ],
+    "pasos": [
+      "Decide el diseño antes de empezar: en media luna sobre un borde o en corona alrededor.",
+      "Pon primero las rodajas de naranja, que son las más grandes, ligeramente superpuestas.",
+      "Intercala las rodajas de limón y llena los espacios con la fresa.",
+      "Espolvorea un poco de azúcar glas, si quieres, justo antes de servir."
+    ],
+    "tip": "Decora poco antes de servir para que las rodajas no absorban humedad de la crema.",
+    "negocio": "Las rodajas cítricas permiten decorar sin depender de fruta fresca de temporada. Cotiza por volumen para tu pastelería."
+  },
+  {
+    "slug": "focaccia-tomate",
+    "titulo": "Focaccia con tomate en aceite",
+    "grupo": "Cocina salada", "sub": "Panes y focaccias",
+    "intro": "Pan esponjoso, dorado por fuera, con nuestro tomate en aceite. El aceite del frasco le da todo el sabor.",
+    "tiempo": 40, "tiempoExtra": "+ 2 h de levado", "porciones": "1 bandeja (8 porciones)", "dificultad": "Media",
+    "productos": [{"nombre": "Tomate en aceite", "detalle": "Frasco · 230 ml", "tipo": "casa"}],
+    "ingredientes": [
+      "500 g de harina de trigo",
+      "400 ml de agua tibia",
+      "7 g de levadura seca",
+      "10 g de sal",
+      "½ frasco de tomate en aceite, con 4 cucharadas de su aceite",
+      "2 cucharadas de aceite de oliva",
+      "Romero fresco y sal gruesa"
+    ],
+    "pasos": [
+      "Mezcla la harina, el agua, la levadura y la sal hasta que no queden grumos. Tapa y deja levar 1 hora.",
+      "Con las manos mojadas, estira y dobla la masa sobre sí misma 4 veces.",
+      "Engrasa una bandeja con el aceite de oliva, pasa la masa y extiéndela. Deja levar otra hora.",
+      "Precalienta el horno a 220 °C. Hunde los dedos en la masa para hacer hoyos.",
+      "Reparte los tomates, el aceite del frasco, el romero y la sal gruesa.",
+      "Hornea 20 a 25 minutos, hasta que esté bien dorada."
+    ],
+    "tip": "No botes el aceite del frasco: es el que le da el sabor a tomate a toda la masa.",
+    "negocio": "Para panadería o restaurante, el tomate en rodajas por 500 g rinde más. Hidrátalo y mézclalo con aceite de oliva antes de usarlo."
+  },
+  {
+    "slug": "pasta-tomate-deshidratado",
+    "titulo": "Pasta con tomate deshidratado",
+    "grupo": "Cocina salada", "sub": "Pastas",
+    "intro": "Una pasta rápida, con sabor concentrado a tomate, ajo y albahaca.",
+    "tiempo": 25, "porciones": "4 porciones", "dificultad": "Fácil",
+    "productos": [{"nombre": "Tomate en rodajas", "detalle": "Bolsa · 100 g", "tipo": "casa"}],
+    "ingredientes": [
+      "400 g de pasta corta",
+      "60 g de tomate deshidratado en rodajas",
+      "2 dientes de ajo picados",
+      "3 cucharadas de aceite de oliva",
+      "50 g de queso parmesano rallado",
+      "Hojas de albahaca fresca",
+      "Sal y pimienta"
+    ],
+    "pasos": [
+      "Hidrata el tomate 10 minutos en agua caliente. Escúrrelo, guarda el agua y pícalo.",
+      "Cocina la pasta en agua con sal según el paquete.",
+      "En un sartén, sofríe el ajo en el aceite sin dejar que se queme. Agrega el tomate y medio pocillo del agua de hidratar.",
+      "Escurre la pasta y mézclala con la salsa. Termina con el queso, la albahaca, sal y pimienta."
+    ],
+    "tip": "El agua donde hidrataste el tomate tiene mucho sabor: úsala en la salsa en vez de agua sola.",
+    "negocio": "Hidrata el tomate al inicio del servicio y guárdalo refrigerado en aceite: queda listo para pastas, ensaladas y sándwiches."
+  },
+  {
+    "slug": "tabla-quesos-frutas",
+    "titulo": "Tabla de quesos con frutas",
+    "grupo": "Cocina salada", "sub": "Tablas",
+    "intro": "Una tabla para compartir donde la fruta deshidratada equilibra lo salado de los quesos.",
+    "tiempo": 15, "porciones": "4 personas", "dificultad": "Fácil",
+    "productos": [
+      {"nombre": "Manzana deshidratada", "detalle": "50 g", "tipo": "casa"},
+      {"nombre": "Piña deshidratada", "detalle": "50 g", "tipo": "casa"},
+      {"nombre": "Uchuva deshidratada", "detalle": "50 g", "tipo": "casa"},
+      {"nombre": "Tomate en aceite", "detalle": "Frasco · 230 ml", "tipo": "casa"}
+    ],
+    "ingredientes": [
+      "3 quesos de diferente textura (uno fresco, uno madurado y uno fuerte)",
+      "30 g de manzana deshidratada",
+      "30 g de piña deshidratada",
+      "20 g de uchuva deshidratada",
+      "4 cucharadas de tomate en aceite",
+      "Galletas o pan tostado",
+      "Nueces y un poco de miel"
+    ],
+    "pasos": [
+      "Saca los quesos de la nevera 30 minutos antes para que tengan mejor sabor.",
+      "Pon los quesos en la tabla, separados entre sí.",
+      "Sirve el tomate en aceite y la miel en recipientes pequeños.",
+      "Llena los espacios con la fruta, las nueces y las galletas."
+    ],
+    "tip": "La manzana va muy bien con quesos madurados y la uchuva con los quesos frescos.",
+    "negocio": "Para catering, la fruta deshidratada no suelta líquido ni se oxida como la fresca: la tabla se mantiene bien durante todo el evento."
+  }
+]

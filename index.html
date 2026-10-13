@@ -159,6 +159,14 @@ section.block{padding-block:clamp(4rem,9vw,7rem)}
 .biz-cta p{font-style:italic;font-weight:300;font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.2;max-width:28ch}
 .formats{font-size:.8rem;color:var(--muted);margin-top:1.4rem;max-width:90ch}
 
+.rcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.8rem,2vw,1.4rem)}
+.rc{display:grid;gap:.6rem;text-decoration:none;color:var(--ink);min-width:0}
+.rc-ph{position:relative;aspect-ratio:4/3;border-radius:var(--r);background:repeating-linear-gradient(135deg,var(--surface) 0 14px,var(--bg-2) 14px 28px)}
+.rc-ph .pend{position:absolute;top:.7rem;left:.7rem}
+.rc-meta{font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.rc-t{font-style:italic;font-weight:300;font-size:1.6rem;line-height:1.1}
+.rc:hover .rc-t{color:var(--gold-soft)}
+@media (max-width:760px){.rcs{grid-template-columns:1fr}.rc{grid-template-columns:120px minmax(0,1fr);grid-template-rows:auto 1fr;column-gap:1rem;align-items:start}.rc-ph{grid-row:1/span 2;aspect-ratio:1}.rc-t{font-size:1.35rem}}
 .about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,6vw,5rem);align-items:center}
 .about-photo{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;max-width:100%}
 .about-photo img{width:100%;height:100%;object-fit:cover}
@@ -263,6 +271,7 @@ footer a{color:var(--muted)}
       <a href="#productos">Productos</a>
       <a href="#negocios">Para negocios</a>
       <a href="#nosotros">Nosotros</a>
+      <a href="recetas.html">Recetas</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <div class="head-cta">
@@ -331,6 +340,17 @@ footer a{color:var(--muted)}
       <p>Cuéntanos qué preparas y cuánto consumes.</p>
       <a class="btn btn-gold" href="#contacto">Cotiza para tu negocio</a>
     </div>
+  </div>
+</section>
+
+<section class="block" id="recetas">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div style="display:grid;gap:1rem"><span class="eyebrow">Recetas</span><h2>En la cocina.</h2></div>
+      <p class="muted">Bebidas, desayunos, repostería y cocina salada con nuestros deshidratados. Cada receta incluye cómo adaptarla para tu negocio.</p>
+    </div>
+    <div class="rcs"><a class="rc" href="recetas/latte-frutos-rojos.html"><span class="rc-ph"><span class="pend" data-pend>Foto pendiente</span></span><span class="rc-meta">Bebidas · 10 min</span><span class="rc-t">Latte de frutos rojos</span></a><a class="rc" href="recetas/granola-mango-uchuva.html"><span class="rc-ph"><span class="pend" data-pend>Foto pendiente</span></span><span class="rc-meta">Desayunos y snacks · 35 min</span><span class="rc-t">Granola casera con mango y uchuva</span></a><a class="rc" href="recetas/focaccia-tomate.html"><span class="rc-ph"><span class="pend" data-pend>Foto pendiente</span></span><span class="rc-meta">Cocina salada · 40 min</span><span class="rc-t">Focaccia con tomate en aceite</span></a></div>
+    <div style="margin-top:2rem"><a class="btn btn-line" href="recetas.html">Ver todas las recetas</a></div>
   </div>
 </section>
 
