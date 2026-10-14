@@ -62,6 +62,9 @@ header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;backgrou
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.75rem}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;min-width:0}
 .brand .name{font-style:italic;font-weight:300;font-size:1.55rem;letter-spacing:-.01em;line-height:1}
+.brand .logo{height:34px;width:auto;display:block}
+.logo-f{height:40px;width:auto;display:block;margin-bottom:.4rem}
+@media (max-width:420px){.brand .logo{height:28px}}
 .brand .sub{font-size:.58rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
 nav.main{display:flex;gap:2rem;font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
 nav.main a{text-decoration:none;color:var(--muted);padding-block:.3rem}
@@ -82,7 +85,8 @@ nav.main a:hover{color:var(--ink)}
 .hero-photo{position:relative;overflow:hidden;background:var(--surface);margin:0}
 .hero-photo img{width:100%;height:100%;object-fit:cover}
 .hero-text{display:grid;align-content:center;gap:1.4rem;padding-block:3rem;padding-inline:clamp(16px,4.5vw,48px) clamp(24px,4vw,64px);max-width:640px;margin-left:auto;width:100%}
-.hero h1{font-size:clamp(2.9rem,6.4vw,5.6rem)}
+.hero h1{font-size:clamp(2.6rem,4.6vw,4.6rem);overflow-wrap:break-word}
+@media (max-width:900px){.hero h1{font-size:clamp(2.6rem,10vw,4rem)}}
 .hero h1 b{font-weight:inherit;color:var(--gold)}
 .hero .lede{font-size:1.1rem;color:var(--muted);max-width:42ch}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.4rem}
@@ -280,7 +284,7 @@ footer a{color:var(--muted)}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="#inicio" aria-label="Los Valles, inicio">
-      <span class="name">Los Valles</span>
+      <img class="logo" src="img/logo-los-valles.png" alt="Los Valles" width="268" height="67">
       <span class="sub">Deshidratados</span>
     </a>
     <nav class="main" id="nav" aria-label="Principal">
@@ -459,7 +463,7 @@ footer a{color:var(--muted)}
 
 <footer>
   <div class="wrap">
-    <div><div class="name">Los Valles</div><div>Productos deshidratados · Sector Aeropuerto JMC, Vda. Playa Rica – Rancherías, Rionegro</div></div>
+    <div><img class="logo-f" src="img/logo-los-valles.png" alt="Los Valles" width="268" height="67" loading="lazy"><div>Productos deshidratados · Sector Aeropuerto JMC, Vda. Playa Rica – Rancherías, Rionegro</div></div>
     <div style="display:grid;gap:.3rem">
       <span>+57 310 374 2028 · info@losvalles.com.co</span>
       <a href="https://www.instagram.com/losvalles_deshidratados/" target="_blank" rel="noopener">@losvalles_deshidratados</a>
