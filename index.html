@@ -167,6 +167,18 @@ section.block{padding-block:clamp(4rem,9vw,7rem)}
 .rc-t{font-style:italic;font-weight:300;font-size:1.6rem;line-height:1.1}
 .rc:hover .rc-t{color:var(--gold-soft)}
 @media (max-width:760px){.rcs{grid-template-columns:1fr}.rc{grid-template-columns:120px minmax(0,1fr);grid-template-rows:auto 1fr;column-gap:1rem;align-items:start}.rc-ph{grid-row:1/span 2;aspect-ratio:1}.rc-t{font-size:1.35rem}}
+.soon{padding-block:clamp(3.5rem,8vw,5.5rem);border-top:1px solid var(--line)}
+.soon-in{display:grid;justify-items:center;text-align:center;gap:1rem}
+.soon-t{font-style:italic;font-weight:300;font-size:clamp(3.4rem,11vw,7.5rem);line-height:1;letter-spacing:-.03em;color:var(--gold)}
+.soon .muted{max-width:48ch}
+.soon a{color:var(--ink)}
+.back{grid-column:1/-1;justify-self:start;font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding-block:.6rem}
+.videos{margin-top:clamp(3rem,7vw,4.5rem);display:grid;gap:1.4rem}
+.videos-head h3{font-size:clamp(2rem,4.5vw,3rem);margin-top:.6rem}
+.vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,360px));gap:clamp(1rem,3vw,2rem)}
+.vbox{display:grid;gap:.7rem;justify-items:start;min-width:0}
+.vbox iframe{width:100%;max-width:100%;aspect-ratio:9/15.5;border:0;border-radius:var(--r);background:var(--surface)}
+@media (max-width:700px){.vgrid{grid-template-columns:1fr;justify-items:center}.vbox{width:100%;max-width:400px}}
 .about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,6vw,5rem);align-items:center}
 .about-photo{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;max-width:100%}
 .about-photo img{width:100%;height:100%;object-fit:cover}
@@ -271,7 +283,7 @@ footer a{color:var(--muted)}
       <a href="#productos">Productos</a>
       <a href="#negocios">Para negocios</a>
       <a href="#nosotros">Nosotros</a>
-      <a href="recetas.html">Recetas</a>
+      <a href="#recetas">Recetas</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <div class="head-cta">
@@ -289,7 +301,7 @@ footer a{color:var(--muted)}
     <div class="hero-text">
       <span class="eyebrow hero-eyebrow">Deshidratados · Rionegro, Antioquia</span>
       <h1>Fruta deshidratada, en su <b>mejor versión.</b></h1>
-      <p class="lede">Aromáticas, frutas, tomates y verduras 100% naturales, sin azúcar añadida. Fruta de productores locales. Proceso artesanal y estandarizado.</p>
+      <p class="lede">Aromáticas, frutas, tomates y verduras 100% naturales, sin azúcar añadida. Deshidratadas lentamente, a baja temperatura. Fruta de productores de la región, cuando se cultiva aquí.</p>
       <div class="ctas">
         <a class="btn btn-gold" href="#contacto">Cotiza para tu negocio</a>
         <a class="btn btn-line" href="#productos">Compra para tu casa</a>
@@ -332,7 +344,7 @@ footer a{color:var(--muted)}
     <h3 class="ideas-title">Ideas para tu negocio</h3>
     <div class="ideas">
       <div class="idea"><img src="img/hero-taza.jpg" alt="Aromática de frutas en taza de vidrio" loading="lazy" width="96" height="120"><div><h3>Bebidas</h3><p>Aromáticas en porción individual, té helado e infusiones frías de la casa.</p></div></div>
-      <div class="idea"><img src="img/frutas.jpg" alt="Rodajas de fruta deshidratada" loading="lazy" width="96" height="120"><div><h3>Coctelería</h3><p>Rodajas de limón y naranja para decorar. Fruta para infusionar destilados.</p></div></div>
+      <div class="idea"><img src="img/frutas.jpg" alt="Rodajas de fruta deshidratada" loading="lazy" width="96" height="120"><div><h3>Coctelería</h3><span class="pend" data-pend style="margin-bottom:.4rem">Foto de limón y naranja</span><p>Rodajas de limón y naranja para decorar. Fruta para infusionar destilados.</p></div></div>
       <div class="idea"><img src="img/tomate-frasco.jpg" alt="Tomate deshidratado en aceite" loading="lazy" width="96" height="120"><div><h3>Cocina</h3><p>Tomate en aceite para focaccias y pastas. Fruta para granolas y postres.</p></div></div>
     </div>
     <p class="formats">Presentaciones para negocio: aromáticas por 25 y 50 porciones · frutas, aromáticas y tomate por 500 g y 1 kg · rodajas de limón y naranja · mayonesa 4&amp;CO por litro · verduras bajo pedido.</p>
@@ -343,14 +355,11 @@ footer a{color:var(--muted)}
   </div>
 </section>
 
-<section class="block" id="recetas">
-  <div class="wrap">
-    <div class="sec-head split">
-      <div style="display:grid;gap:1rem"><span class="eyebrow">Recetas</span><h2>En la cocina.</h2></div>
-      <p class="muted">Bebidas, desayunos, repostería y cocina salada con nuestros deshidratados. Cada receta incluye cómo adaptarla para tu negocio.</p>
-    </div>
-    <div class="rcs"><a class="rc" href="recetas/latte-frutos-rojos.html"><span class="rc-ph"><span class="pend" data-pend>Foto pendiente</span></span><span class="rc-meta">Bebidas · 10 min</span><span class="rc-t">Latte de frutos rojos</span></a><a class="rc" href="recetas/granola-mango-uchuva.html"><span class="rc-ph"><span class="pend" data-pend>Foto pendiente</span></span><span class="rc-meta">Desayunos y snacks · 35 min</span><span class="rc-t">Granola casera con mango y uchuva</span></a><a class="rc" href="recetas/focaccia-tomate.html"><span class="rc-ph"><span class="pend" data-pend>Foto pendiente</span></span><span class="rc-meta">Cocina salada · 40 min</span><span class="rc-t">Focaccia con tomate en aceite</span></a></div>
-    <div style="margin-top:2rem"><a class="btn btn-line" href="recetas.html">Ver todas las recetas</a></div>
+<section class="block soon" id="recetas">
+  <div class="wrap soon-in">
+    <span class="eyebrow">Recetas</span>
+    <p class="soon-t">Próximamente.</p>
+    <p class="muted">Estamos preparando recetas con nuestros deshidratados para tu casa y tu negocio. Mientras tanto, encuentra ideas en nuestro <a href="https://www.instagram.com/losvalles_deshidratados/" target="_blank" rel="noopener">Instagram</a>.</p>
   </div>
 </section>
 
@@ -361,13 +370,21 @@ footer a{color:var(--muted)}
       <div class="about-text">
         <span class="eyebrow">Nosotros</span>
         <h2>Una familia de Rionegro, desde 2007.</h2>
-        <p class="lead">Los Valles nació como empresa familiar y la siguen dirigiendo sus fundadores. Seleccionamos fruta de productores locales del Oriente antioqueño y la deshidratamos con un proceso artesanal y estandarizado para preservar su esencia.</p>
+        <p class="lead">Los Valles nació en 2007 como empresa familiar y la siguen dirigiendo sus fundadores. Deshidratamos la fruta de verdad: la secamos lentamente y a baja temperatura, para que conserve su color, su sabor y su aroma.</p>
+        <p class="lead">Cuando la fruta se cultiva en la región, se la compramos a productores del Oriente antioqueño, con negociaciones justas que nos permitan crecer juntos.</p>
         <ol class="steps">
-          <li><b>Selección</b><span>Fruta local, escogida por color, sabor y textura.</span></li>
-          <li><b>Preparación</b><span>Lavado y corte en nuestra planta.</span></li>
-          <li><b>Deshidratación</b><span>Artesanal y estandarizada, sin azúcar añadida.</span></li>
+          <li><b>Selección</b><span>Fruta escogida por color, sabor y textura.</span></li>
+          <li><b>Preparación</b><span>Lavado y corte en nuestra planta de Rionegro.</span></li>
+          <li><b>Deshidratación lenta</b><span>A baja temperatura, sin azúcar añadida.</span></li>
           <li><b>Trazabilidad</b><span>De principio a fin, con manejo responsable de residuos.</span></li>
         </ol>
+      </div>
+    </div>
+    <div class="videos">
+      <div class="videos-head"><span class="eyebrow">En video</span><h3>Conócenos.</h3></div>
+      <div class="vgrid">
+        <div class="vbox"><iframe src="https://www.instagram.com/reel/DeNeCpxPW02/embed" title="Video de Los Valles en Instagram" loading="lazy" allowfullscreen scrolling="no"></iframe><a class="mini" href="https://www.instagram.com/reel/DeNeCpxPW02/" target="_blank" rel="noopener">Ver en Instagram</a></div>
+        <div class="vbox"><iframe src="https://www.instagram.com/reel/DbEEdRERzij/embed" title="Video de Los Valles en Instagram" loading="lazy" allowfullscreen scrolling="no"></iframe><a class="mini" href="https://www.instagram.com/reel/DbEEdRERzij/" target="_blank" rel="noopener">Ver en Instagram</a></div>
       </div>
     </div>
   </div>
@@ -409,6 +426,7 @@ footer a{color:var(--muted)}
             <button type="button" class="mini" id="q-new">Nueva solicitud</button>
           </div>
         </div>
+        <a class="back" href="#inicio">↑ Volver al inicio</a>
       </form>
       <aside class="channels" aria-label="Canales de contacto">
         <div class="channel"><span class="lbl">WhatsApp</span><span class="val">+57 310 374 2028</span>
@@ -440,6 +458,7 @@ footer a{color:var(--muted)}
     <div style="display:grid;gap:.3rem">
       <span>+57 310 374 2028 · info@losvalles.com.co</span>
       <a href="https://www.instagram.com/losvalles_deshidratados/" target="_blank" rel="noopener">@losvalles_deshidratados</a>
+      <a href="#inicio">↑ Volver al inicio</a>
       <button class="admin-link" id="adminLink" type="button" hidden>Ver solicitudes recibidas</button>
     </div>
   </div>
@@ -492,7 +511,7 @@ const CATS=[
   {id:'aromaticas',name:'Aromáticas',img:'img/aromaticas-porciones.jpg',alt:'Bolsas de aromáticas de frutas',
    short:'Cinco sabores para preparar en agua caliente o fría.',
    desc:'Mezclas de fruta deshidratada. Sabores: Frutos rojos, Tradicional, Frutos amarillos, Piña jengibre y Manzana canela.',
-   uses:['Aromática caliente','Té helado','Infusión fría','Cocteles sin alcohol','Regalo corporativo'],
+   uses:['Aromática caliente','Té helado','Infusión fría','Cocteles con y sin alcohol','Regalo corporativo'],
    items:[['Frutos rojos','Frasco de vidrio · 80 g',26500],['Tradicional','Frasco de vidrio · 90 g',26500],['Frutos amarillos','Frasco de vidrio · 100 g',24500],['Piña jengibre','Frasco de vidrio · 100 g',24500],['Manzana canela','Frasco de vidrio · 80 g',23000],['Aromáticas surtidas','Bolsa · 12 porciones',34000],['Caja de regalo','14 porciones surtidas',45000]],
    biz:'Por 25 y 50 porciones individuales, o a granel por 500 g y 1 kg.',check:'qp-arom'},
   {id:'frutas',name:'Frutas',img:'img/frutas.jpg',alt:'Rodajas de piña, mango, manzana y fresa deshidratadas',
