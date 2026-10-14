@@ -3,7 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://losvalles.com.co/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Los Valles Deshidratados">
+<meta property="og:title" content="Los Valles · Fruta deshidratada desde 2007">
+<meta property="og:description" content="Aromáticas, frutas, tomates y verduras deshidratadas 100% naturales, sin azúcar añadida. Rionegro, Antioquia. Cotiza para tu negocio.">
+<meta property="og:image" content="https://losvalles.com.co/img/aromaticas-sabores.jpg">
+<meta property="og:locale" content="es_CO">
+<meta name="theme-color" content="#0F1F16">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1F16'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='%23C9A45C'%3ELV%3C/text%3E%3C/svg%3E">
 <title>Los Valles Deshidratados</title>
 <meta name="description" content="Frutas, aromáticas, tomates y verduras deshidratadas 100% naturales. Empresa familiar de Rionegro, Antioquia, desde 2007. Cotiza para tu negocio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,7 +177,7 @@ section.block{padding-block:clamp(4rem,9vw,7rem)}
 @media (max-width:760px){.rcs{grid-template-columns:1fr}.rc{grid-template-columns:120px minmax(0,1fr);grid-template-rows:auto 1fr;column-gap:1rem;align-items:start}.rc-ph{grid-row:1/span 2;aspect-ratio:1}.rc-t{font-size:1.35rem}}
 .soon{padding-block:clamp(3.5rem,8vw,5.5rem);border-top:1px solid var(--line)}
 .soon-in{display:grid;justify-items:center;text-align:center;gap:1rem}
-.soon-t{font-style:italic;font-weight:700;font-size:clamp(3.4rem,11vw,7.5rem);line-height:1;letter-spacing:-.03em;color:var(--gold)}
+.soon-t{font-style:italic;font-weight:700;font-size:clamp(2.6rem,9.5vw,7.5rem);max-width:100%;line-height:1;letter-spacing:-.03em;color:var(--gold)}
 .soon .muted{max-width:48ch}
 .soon a{color:var(--ink)}
 .back{grid-column:1/-1;justify-self:start;font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;padding-block:.6rem}
@@ -210,6 +218,9 @@ input:focus,select:focus{outline:none;border-bottom-color:var(--gold)}
 .checks label{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .95rem;border:1px solid var(--line);border-radius:999px;cursor:pointer;font-size:.85rem;letter-spacing:.02em;text-transform:none;color:var(--ink);font-weight:400;min-height:44px}
 .checks input{accent-color:var(--gold);margin:0}
 .checks label:has(input:checked){border-color:var(--gold);color:var(--gold)}
+.consent{display:flex!important;gap:.6rem;align-items:flex-start;font-size:.82rem!important;letter-spacing:0!important;text-transform:none!important;color:var(--muted)!important;font-weight:400!important;line-height:1.45}
+.consent input{accent-color:var(--gold);margin-top:.2rem;width:18px;height:18px;flex:none}
+.consent a{color:var(--ink)}
 .err{font-size:.85rem;color:var(--err);min-height:1.2em}
 .form-actions{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center}
 .done-panel{border:1px solid var(--gold);border-radius:var(--r);padding:1.3rem;display:grid;gap:.8rem}
@@ -265,19 +276,12 @@ footer a{color:var(--muted)}
 <body>
 
 
-<div class="review" id="review">
-  <div class="wrap">
-    <span><b>Versión de revisión.</b> Lo marcado <span class="pend">Pendiente</span> falta por completar: logo, foto de verduras y precio final con IVA.</span>
-    <button type="button" id="hideReview">Ocultar marcas</button>
-  </div>
-</div>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="#inicio" aria-label="Los Valles, inicio">
       <span class="name">Los Valles</span>
-      <span class="sub">Desde 2007</span>
-      <span class="pend" data-pend>Logo</span>
+      <span class="sub">Deshidratados</span>
     </a>
     <nav class="main" id="nav" aria-label="Principal">
       <a href="#productos">Productos</a>
@@ -323,7 +327,7 @@ footer a{color:var(--muted)}
   <div class="wrap">
     <div class="sec-head split">
       <div style="display:grid;gap:1rem"><span class="eyebrow">Productos</span><h2>Cinco líneas.<br>Una misma esencia.</h2></div>
-      <p class="muted">Encuentra en cada una presentaciones, precios y usos sugeridos. Para tu casa, arma el pedido. Para tu negocio, cotiza por volumen.</p>
+      <p class="muted">Encuentra en cada una presentaciones, precios y usos sugeridos. Para tu casa, arma tu pedido y te confirmamos precio por WhatsApp. Para tu negocio, cotiza por volumen.</p>
     </div>
     <div class="cards" id="cards"></div>
   </div>
@@ -344,7 +348,7 @@ footer a{color:var(--muted)}
     <h3 class="ideas-title">Ideas para tu negocio</h3>
     <div class="ideas">
       <div class="idea"><img src="img/hero-taza.jpg" alt="Aromática de frutas en taza de vidrio" loading="lazy" width="96" height="120"><div><h3>Bebidas</h3><p>Aromáticas en porción individual, té helado e infusiones frías de la casa.</p></div></div>
-      <div class="idea"><img src="img/frutas.jpg" alt="Rodajas de fruta deshidratada" loading="lazy" width="96" height="120"><div><h3>Coctelería</h3><span class="pend" data-pend style="margin-bottom:.4rem">Foto de limón y naranja</span><p>Rodajas de limón y naranja para decorar. Fruta para infusionar destilados.</p></div></div>
+      <div class="idea"><img src="img/frutas.jpg" alt="Rodajas de fruta deshidratada" loading="lazy" width="96" height="120"><div><h3>Coctelería</h3><p>Rodajas de limón y naranja para decorar. Fruta para infusionar destilados.</p></div></div>
       <div class="idea"><img src="img/tomate-frasco.jpg" alt="Tomate deshidratado en aceite" loading="lazy" width="96" height="120"><div><h3>Cocina</h3><p>Tomate en aceite para focaccias y pastas. Fruta para granolas y postres.</p></div></div>
     </div>
     <p class="formats">Presentaciones para negocio: aromáticas por 25 y 50 porciones · frutas, aromáticas y tomate por 500 g y 1 kg · rodajas de limón y naranja · mayonesa 4&amp;CO por litro · verduras bajo pedido.</p>
@@ -413,6 +417,7 @@ footer a{color:var(--muted)}
             <label><input type="checkbox" id="qp-verd" value="Verduras"> Verduras</label>
             <label><input type="checkbox" id="qp-4co" value="4&CO"> 4&amp;CO</label>
           </div></div>
+        <label class="consent full"><input type="checkbox" id="q-acepto"> <span>Autorizo a Los Valles a usar mis datos para responder esta solicitud, según la <a href="politica-de-datos.html" target="_blank" rel="noopener">política de tratamiento de datos</a>.</span></label>
         <p class="err full" id="q-err" role="alert"></p>
         <div class="form-actions full">
           <button type="submit" class="btn btn-gold" id="q-submit">Preparar solicitud</button>
@@ -458,6 +463,7 @@ footer a{color:var(--muted)}
     <div style="display:grid;gap:.3rem">
       <span>+57 310 374 2028 · info@losvalles.com.co</span>
       <a href="https://www.instagram.com/losvalles_deshidratados/" target="_blank" rel="noopener">@losvalles_deshidratados</a>
+      <a href="politica-de-datos.html">Política de tratamiento de datos</a>
       <a href="#inicio">↑ Volver al inicio</a>
       <button class="admin-link" id="adminLink" type="button" hidden>Ver solicitudes recibidas</button>
     </div>
@@ -486,10 +492,10 @@ footer a{color:var(--muted)}
   <div class="sheet-head"><h3 id="cartTitle">Tu pedido</h3><button class="x" data-close aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
   <div class="sheet-body">
     <div id="cartLines"></div>
-    <div class="total"><span>Subtotal antes de IVA</span><span id="cartTotal">$0</span></div>
-    <p class="note">El envío se confirma por WhatsApp según tu municipio. <span class="pend" data-pend>Precio final con IVA</span></p>
+    <p class="note">Te confirmamos por WhatsApp el precio, el envío y el día de entrega (martes o jueves).</p>
     <div class="field"><label for="c-nombre">Tu nombre</label><input type="text" id="c-nombre" autocomplete="name"></div>
     <div class="field"><label for="c-ciudad">Municipio de entrega</label><input type="text" id="c-ciudad" placeholder="Ej.: Rionegro"></div>
+    <label class="consent"><input type="checkbox" id="c-acepto"> <span>Autorizo el uso de mis datos según la <a href="politica-de-datos.html" target="_blank" rel="noopener">política de tratamiento de datos</a>.</span></label>
     <p class="err" id="c-err" role="alert"></p>
   </div>
   <div class="sheet-foot">
@@ -544,7 +550,7 @@ const cards=$('#cards');
 CATS.forEach(c=>{
   const b=document.createElement('button');
   b.type='button'; b.className='card'+(c.img?'':' noimg'); b.dataset.cat=c.id;
-  b.innerHTML=(c.img?`<img src="${c.img}" alt="${c.alt}" loading="lazy">`:`<span class="pend" data-pend>Foto pendiente</span>`)+
+  b.innerHTML=(c.img?`<img src="${c.img}" alt="${c.alt}" loading="lazy">`:'')+
     `<span class="ct"><b>${c.name}</b><span>${c.short}</span><i>${c.onlyBiz?'Cotizar':'Ver productos'} →</i></span>`;
   b.addEventListener('click',()=>openCat(c.id));
   cards.appendChild(b);
@@ -562,11 +568,10 @@ function openCat(id){
   const c=CATS.find(x=>x.id===id);
   $('#catTitle').textContent=c.name;
   const items=c.items.length?`
-    <div><div class="list-label"><span>Para tu casa</span><span>Antes de IVA</span></div>
+    <div><div class="list-label"><span>Para tu casa</span><span>Precio por WhatsApp</span></div>
     <ul class="items">${c.items.map((it,k)=>{const key=c.id+'-'+k,inC=cart.some(l=>l.key===key);
-      return `<li class="item"><span class="nm">${it[0]}</span><span class="ds">${it[1]}</span><span class="pr">${fmt(it[2])}<small>+ IVA</small></span>
-      <button class="add${inC?' done':''}" type="button" data-key="${key}" aria-label="Agregar ${it[0]}, ${it[1]}">${plus(inC)}</button></li>`}).join('')}</ul>
-    <p class="note" style="margin-top:.6rem"><span class="pend" data-pend>Confirmar precio final con IVA</span></p></div>`:'';
+      return `<li class="item"><span class="nm">${it[0]}</span><span class="ds">${it[1]}</span>      <button class="add${inC?' done':''}" type="button" data-key="${key}" aria-label="Agregar ${it[0]}, ${it[1]}">${plus(inC)}</button></li>`}).join('')}</ul>
+    <p class="note" style="margin-top:.6rem">Agrega lo que quieras y te confirmamos precio y entrega por WhatsApp.</p></div>`:'';
   $('#catBody').innerHTML=`<p class="muted">${c.desc}</p>
     <div class="uses" aria-label="Usos sugeridos">${c.uses.map(u=>`<span>${u}</span>`).join('')}</div>
     ${items}
@@ -587,9 +592,8 @@ function renderCart(){
   const n=cart.reduce((a,l)=>a+l.q,0);
   $('#cartN').textContent=n; $('#dockN').textContent=n;
   $('#cartPill').hidden=n===0; $('#dockCart').hidden=n===0;
-  $('#cartLines').innerHTML=cart.length?cart.map(l=>`<div class="line"><span class="nm">${l.cat} · ${l.name}</span><span class="ds">${l.desc} · ${fmt(l.price)}</span>
+  $('#cartLines').innerHTML=cart.length?cart.map(l=>`<div class="line"><span class="nm">${l.cat} · ${l.name}</span><span class="ds">${l.desc}</span>
     <span class="qty"><button type="button" data-dec="${l.key}" aria-label="Quitar uno">−</button><span>${l.q}</span><button type="button" data-inc="${l.key}" aria-label="Agregar uno">+</button></span></div>`).join(''):'<p class="muted">Tu pedido está vacío.</p>';
-  $('#cartTotal').textContent=fmt(cart.reduce((a,l)=>a+l.q*l.price,0));
   $('#cartWa').hidden=true; $('#cartSend').hidden=false;
 }
 $('#cartLines').addEventListener('click',e=>{
@@ -604,19 +608,19 @@ $('#cartSend').onclick=async()=>{
   const nombre=$('#c-nombre').value.trim(), ciudad=$('#c-ciudad').value.trim();
   if(!cart.length){ $('#c-err').textContent='Agrega al menos un producto.'; return; }
   if(!nombre||!ciudad){ $('#c-err').textContent='Escribe tu nombre y el municipio de entrega.'; return; }
+  if(!$('#c-acepto').checked){ $('#c-err').textContent='Marca la autorización de datos para continuar.'; return; }
   $('#c-err').textContent='';
-  const total=cart.reduce((a,l)=>a+l.q*l.price,0);
-  const txt=`Hola Los Valles, quiero hacer un pedido:\n${cart.map(l=>`• ${l.q} x ${l.cat} ${l.name} (${l.desc}) - ${fmt(l.price*l.q)}`).join('\n')}\nSubtotal antes de IVA: ${fmt(total)}\n\nNombre: ${nombre}\nMunicipio: ${ciudad}`;
+  const txt=`Hola Los Valles, quiero hacer un pedido:\n${cart.map(l=>`• ${l.q} x ${l.cat} ${l.name} (${l.desc}) `).join('\n')}\n¿Me confirman precio y entrega?\n\nNombre: ${nombre}\nMunicipio: ${ciudad}`;
   $('#cartWa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(txt);
   $('#cartWa').hidden=false; $('#cartSend').hidden=true;
-  await save({tipo:'pedido',nombre,ciudad,negocio:'',detalle:cart.map(l=>`${l.q} x ${l.cat} ${l.name} (${l.desc})`).join('; '),total});
+  await save({tipo:'pedido',nombre,ciudad,negocio:'',detalle:cart.map(l=>`${l.q} x ${l.cat} ${l.name} (${l.desc})`).join('; ')});
 };
 
 $('#quoteForm').addEventListener('submit',async e=>{
   e.preventDefault();
   const v=id=>$('#'+id).value.trim();
   const prods=[...document.querySelectorAll('#q-productos input:checked')].map(i=>i.value);
-  const miss=[]; if(!v('q-nombre'))miss.push('nombre'); if(!v('q-negocio'))miss.push('negocio'); if(!v('q-ciudad'))miss.push('ciudad'); if(!prods.length)miss.push('al menos un producto');
+  const miss=[]; if(!v('q-nombre'))miss.push('nombre'); if(!v('q-negocio'))miss.push('negocio'); if(!v('q-ciudad'))miss.push('ciudad'); if(!prods.length)miss.push('al menos un producto'); if(!$('#q-acepto').checked)miss.push('la autorización de datos');
   if(miss.length){ $('#q-err').textContent='Falta completar: '+miss.join(', ')+'.'; return; }
   $('#q-err').textContent='';
   const d={tipo:'cotizacion',nombre:v('q-nombre'),negocio:v('q-negocio'),ciudad:v('q-ciudad'),productos:prods,volumen:$('#q-volumen').value||'No indicado'};
@@ -673,8 +677,7 @@ document.addEventListener('click',async e=>{
 const nav=$('#nav'),mb=$('#menuBtn');
 mb.onclick=()=>{ const o=!nav.classList.contains('open'); nav.classList.toggle('open',o); mb.setAttribute('aria-expanded',o); };
 nav.addEventListener('click',e=>{ if(e.target.tagName==='A'){ nav.classList.remove('open'); mb.setAttribute('aria-expanded',false);} });
-function applyPend(){ document.querySelectorAll('[data-pend]').forEach(el=>el.hidden=pendHidden); $('#review').hidden=pendHidden; }
-$('#hideReview').onclick=()=>{ pendHidden=true; try{localStorage.setItem('lv-hide-pend','1');}catch(e){} applyPend(); };
+function applyPend(){}
 applyPend(); renderCart();
 })();
 </script>
